@@ -1,0 +1,72 @@
+div {
+
+    table {
+
+        tr {
+            
+            
+        }
+
+        .thead {
+            td {
+                font-weight: bold;
+                height: 40px;
+                background: rgba(213, 1, 1, 0.69);
+                color: white;
+                font-style: normal;
+                text-align: center;
+            }
+        }
+
+        td {
+            background: #D9D9D9;
+
+            &.heart {
+                text-align: center;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+        }
+
+
+    }
+
+}
+
+.c-orgt {
+    padding-left: 30px;
+}
+
+.tdetails {
+    font-size: 13px;
+}
+
+
+
+.c-fst {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.c-lst {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container{
+        
+    .row{
+        
+
+        .card.card-img{
+            background-color: rgba(255, 255, 255, 0);
+            border: 0;
+        }
+    }
+    
+}
+
+
+* {
+    padding: 0;
+}

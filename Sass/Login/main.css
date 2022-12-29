@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Nunito:ital@0;1&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css");
+html,
+body {
+  min-height: 100vh;
+  background-color: #E1E8EE;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik";
+}
+
+.container-form {
+  background-color: rgba(213, 1, 1, 0.4);
+  border-radius: 15px;
+  width: 409px;
+  height: 457px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+}
+.container-form::after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(213, 1, 1, 0.4);
+  background-size: 500px;
+  background-position: left bottom;
+}
+.container-form form .signup {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+.container-form form .signup.slide-up {
+  top: 3%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease;
+}
+.container-form form .signup.slide-up .form-holder, .container-form form .signup.slide-up .submit-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+.container-form form .signup.slide-up .form-title {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.container-form form .signup.slide-up .form-title div {
+  margin-right: 5px;
+  margin-top: 0;
+  font-size: 0.5em;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.container-form form .signup .form-title {
+  color: #fff;
+  font-size: 1.7em;
+  text-align: center;
+}
+.container-form form .signup .form-title div {
+  font-size: medium;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.container-form form .signup .form-holder {
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.container-form form .signup .form-holder .input {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 38px;
+  line-height: 30px;
+  padding: 8px 15px;
+  border-bottom: 2px solid rgb(161, 14, 14);
+  width: 100%;
+  font-size: 12px;
+}
+.container-form form .signup .form-holder .input:last-child {
+  border-bottom: 0;
+}
+.container-form form .signup .form-holder .input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.container-form form .signup .submit-btn {
+  background-color: #CB0010;
+  color: rgb(255, 255, 255);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.container-form form .signup .submit-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container-form form .login {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+.container-form form .login::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  width: 200%;
+  height: 250px;
+  border-radius: 50%;
+  z-index: 4;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center .form-title {
+  color: #D50101;
+  font-size: 1.7em;
+  text-align: center;
+}
+.container-form form .login .center .form-title div {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  font-size: medium;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center .form-title span {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center .form-holder {
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center .form-holder .input {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
+}
+.container-form form .login .center .form-holder .input:last-child {
+  border-bottom: 0;
+}
+.container-form form .login .center .form-holder .input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.container-form form .login .center .submit-btn {
+  background-color: #D50101;
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.container-form form .login .center .submit-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container-form form .login .center .forgotPw {
+  text-align: center;
+  font-size: smaller;
+  opacity: 50%;
+}
+.container-form form .login.slide-up {
+  top: 85%;
+  transition: all 0.5s ease;
+}
+.container-form form .login.slide-up .center {
+  top: 10%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease;
+}
+.container-form form .login.slide-up .form-holder, .container-form form .login.slide-up .submit-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.container-form form .login.slide-up .form-title {
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.container-form form .login.slide-up .form-title div {
+  margin-right: 5px;
+  font-size: 0.5em;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.input-group-text {
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.input {
+  height: 28px;
+}
+
+.form-control-frm {
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+  border-color: #e2e2e2;
+  font-size: small;
+  color: rgb(61, 153, 8);
+}
+
+input[class=input]::placeholder {
+  font-size: small;
+  vertical-align: middle;
+  color: rgb(209, 209, 209);
+  text-align: center;
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
