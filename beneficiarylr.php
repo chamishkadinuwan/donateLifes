@@ -2,7 +2,7 @@
 
 
      include "connection.php";
-     include "connection.php";
+    
     $name = $_POST['fname'];
     $email  = $_POST['email'];
     $telenumber = $_POST['tnum'];
