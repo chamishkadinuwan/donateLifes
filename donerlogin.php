@@ -8,7 +8,7 @@ $connection=new mysqli("localhost","root","","donatelife");
    if($connection -> connect_error){
     die("connection error");
   }else{
-    $statement=$connection->prepare ("select * from logandreg where email = ?");
+    $statement=$connection->prepare ("select * from logdoner where email = ?");
     $statement -> bind_param("s",$email);
     $statement ->execute();
     $stmt_result=$statement ->get_result();

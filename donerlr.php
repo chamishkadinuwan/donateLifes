@@ -9,7 +9,7 @@
     $password1  = $_POST['repassword'];
     
     
-     $sql="insert into logandreg(name,email,telenumber,password) values(?,?,?,?)";
+     $sql="insert into logdoner(name,email,telenumber,password) values(?,?,?,?)";
 
     $statement=$connection->prepare ($sql);
             
