@@ -8,7 +8,7 @@
     $telenumber = $_POST['tnum'];
     $password  = $_POST['pw'];
     $password1  = $_POST['repassword'];
-    good morning
+ 
     
      $sql="insert into logandreg(name,email,telenumber,password) values(?,?,?,?)";
 
