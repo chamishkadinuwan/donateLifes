@@ -64,6 +64,7 @@
         }
     }
     ?>
+
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-3 container-fluid ">
@@ -75,7 +76,9 @@
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
                     </div>
-                    <div class="col-md-6"></div>
+
+                    <div class="col-md-5"></div>
+
                     <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
                             <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
@@ -88,17 +91,23 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-1">
+
+                    <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <!--<button type="button" class="btn btn-login me-2" text-decoration-none>Login</button> -->
-                            <a href="GetStarted.html" class="nav-link none"><button type="button"
-                                    class="btn btn-signup ">Signup</button></a>
+                            <a href="Login.html" class="nav-link none">
+                                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
+                            </a>
+                            <a href="GetStarted.html" class="nav-link none">
+                                <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
+                            </a>
                             <!--</div>-->
                         </div>
                     </div>
+
                 </div>
         </header>
     </div>
+
 
 
     <!--Beneficiary form-->
