@@ -241,7 +241,7 @@
                                 <option value="wavniya">Wavniya</option>
                                 <option value="Mannaram">Mannaram</option>
                                 <option value="Madakalapuwa">Madakalapuwa</option>
-                                <option value="Maha Nuwara">Maha Nuwara</option>
+                                <option value="kandy">Maha Nuwara</option>
                                 <option value="Rathnapura">Rathnapura</option>
                                 <option value="Kaluthara">Kaluthara</option>
                                 <option value="Colombo">Colombo</option>

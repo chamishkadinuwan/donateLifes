@@ -16,7 +16,8 @@ $connection=new mysqli("localhost","root","","donatelife");
     if($stmt_result -> num_rows >0){
         $data=$stmt_result ->fetch_assoc();
         if($data['password']==$password){
-           
+           session_start();
+           $_SESSION['pass']=$data['password'];
               header("location: DonorInstructions.HTML");
             
 
