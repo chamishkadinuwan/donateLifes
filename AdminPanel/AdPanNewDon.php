@@ -5,25 +5,24 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin pannel- Com bene</title>
-
+    <title>Admin pannel-New Donor</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <link href="Sass/main.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/sanduni.css" rel="stylesheet">
+    <link href="../Sass/main.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/sanduni.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
 </head>
 
-<body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
+<body style="background-image: url(../Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
 
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-3">
         <header class="d-flex flex-wrap justify-content-center px-5 py-3 mb-3 container-fluid ">
             <a href="HomePage.html" class="d-flex align-items-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img src="images/Logo.png" alt="" width="100" class="">
+                <img src="../images/Logo.png" alt="" width="100" class="">
             </a>
 
             <ul class="nav nav-pills d-flex flex-wrap justify-content-center">
@@ -46,12 +45,13 @@
         <div class="row d-flex justify-content-between">
             <div class="grayCardL col-3 px-2">
                 <div class="adH">ADMIN PANEL</div>
+
                 <div class="adCon">
-                    <div class="ad mt-4 pt-4"> <i class="bi bi-house-heart-fill"></i> Dashboard</div>
-                    <div class="ad"> <i class="bi bi-person-heart"></i> New Donor</div>
-                    <div class="ad"> <i class="bi bi-person-heart"></i> New Benificiary</div>
-                    <div class="ad"> <i class="bi bi-person-check-fill"></i> Confirmed Donor</div>
-                    <div class="ad pb-2"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary</div>
+                    <div class="ad mt-4 pt-4 red"><a href="AdPanDashBoard.php" class="text-dark text-decoration-none"> <i class="bi bi-house-heart-fill"></i> Dashboard </a></div>
+                    <div class="ad" style="color: red;"> <a href="AdPanNewDon.php" class="text-dark text-decoration-none"> <i class="bi bi-person-heart"></i> New Donor  </a></div>
+                    <div class="ad"> <a href="AdPanNewBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-heart"></i> New Benificiary </a></div>
+                    <div class="ad"> <a href="AdPanConDon.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </a></div>
+                    <div class="ad"> <a href="AdPanConBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </a> </div>
                 </div>
 
                 <div class="adLog"> <button class="btn form">Logout</button></div>
@@ -60,7 +60,7 @@
 
             <div class="grayCardR col-9 px-4">
 
-                <div class="adH"><i class="bi bi-person-heart pe-3"></i> CONFIRMED BENEFICIARY</div>
+                <div class="adH"><i class="bi bi-person-heart pe-3"></i> NEW DONOR</div>
 
                 <div class="adCard d-flex align-content-center flex-wrap">
 
@@ -70,7 +70,6 @@
                             <h5 class="card-title mb-3">Kusal Mendis</h5>
                             <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
                             <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
                             <div class="adViewBtn"> <button class="btn form">View ></button></div>
                         </div>
 
@@ -226,7 +225,7 @@
 
             <div class="col ps-5 pt-3">
                 <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none d-flex align-items-center justify-content-center">
-                    <img src="Images/Logo.png" class="bi" height="100" style="mix-blend-mode: luminosity;">
+                    <img src="../Images/Logo.png" class="bi" height="100" style="mix-blend-mode: luminosity;">
                 </a>
 
             </div>

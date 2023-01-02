@@ -3,14 +3,18 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css');
 
 :root {
-    --red-t: #D50101;
+    --red-t: #ce5454;
     --bg-pic: url(../Images/BGPic.jpg);
 }
 
 .red {
     color: var(--red-t);
 }
+/* .ad:active {
 
+    background-color:green;
+    
+} */
 body {
     background-image: var(--bg-pic);
     background-color: var(--bg-color);
