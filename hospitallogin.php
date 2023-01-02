@@ -10,15 +10,11 @@ include "connection.php";
     $password1  = $_POST['repassword'];
     
     
-     $sql="insert into hospital_sign(hospital_id,hospital_name,email,tp _no,address,password) values(?,?,?,?,?,?)";
-
-    $statement=$connection->prepare ($sql);
-            
-    $statement -> bind_param("ississ",$hospital_id,$hospital_name,$email,$tp_no,$address,$password);
+     $sql="insert into hospital_sign values('$hospital_id','$hospital_name','$email','$tp_no','$address','$password')";
     
         
         if($password == $password1){
-            if($statement->execute()){
+            if($connection->query($sql) === TRUE){
              echo "success";
 
         }else{
