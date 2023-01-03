@@ -2,11 +2,10 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <link rel="shortcut icon" href="../Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin pannel-New bene</title>
-
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -33,11 +32,6 @@
                 <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
             </ul>
 
-            <div class="col-md-0 d-flex flex-wrap justify-content-center">
-                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
-                <button type="button" class="btn btn-signup">Signup</button>
-
-            </div>
         </header>
     </div>
 
@@ -55,7 +49,8 @@
                     <div class="ad"> <a href="AdPanConBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </a> </div>
                 </div>
 
-                <div class="adLog"> <button class="btn form">Logout</button></div>
+                <div class="adLog"> <a href="../HomePage.html" class="text-decoration-none"> <div class="btn form">Logout</div></a></div>
+
 
             </div>
 

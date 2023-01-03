@@ -7,9 +7,9 @@
     $telenumber = $_POST['tnum'];
     $password  = $_POST['pw'];
     $password1  = $_POST['repassword'];
+
     
-    
-     $sql="insert into logdoner(name,email,telenumber,password) values(?,?,?,?)";
+    $sql="insert into logdoner(name,email,telenumber,password) values(?,?,?,?)";
 
     $statement=$connection->prepare ($sql);
             

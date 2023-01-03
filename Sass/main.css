@@ -84,9 +84,6 @@ div table td.heart {
   color: var(--red-t);
   transition: all 0.2s ease-in;
 }
-.whiteCard div.row .grayCardL .adCon .ad:after {
-  color: var(--red-t);
-}
 .whiteCard div.row .grayCardL .adLog {
   display: flex;
   justify-content: center;

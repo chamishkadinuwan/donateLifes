@@ -12,7 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <link href="Sass/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
 </head>
 
 <body class=" m-0 border-0">
@@ -88,44 +91,81 @@
 
     </div>
 
-    <!-- Instructions -->
-    <div class="container flex-wrap justify-content-center card instr col-6 mt-5 py-4">
-        Basic Instructions
-        <div class="instr-sub px-4 py-3 justify-content-top owerflow-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>You can use login and signup page for your purposes. <br />
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>If you can donate the organs then you cna use to login as the donor.<br />
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>If you can request the organs then you cna use to login as the beneficiary.<br />
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>You can get the idea for organs using the organ information page.<br />
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>You can get the idea for hospital using the hospital information page.<br />
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                viewBox="0 0 16 16">
-                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-            </svg>You can find out the available of organs using the avaible of organs page<br />
-
+    <!-- Donor Instructions -->
+    <div class="d-flex justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Basic Instructions </div>
+    <div class="container flex-wrap justify-content-center card inst col-md-7 mt-4 py-4">
+        <div class="card inst-sub px-4 py-3 justify-content-top owerflow-auto">
+            <ul type="disk">
+                <li>
+                    You can use login and signup page for your purposes.
+                </li>
+                <li>
+                    If you can donate the organs then you can use to login as the donor.
+                </li>
+                <li>
+                    If you can request the organs then you cna use to login as the beneficiary.
+                </li>
+                <li>
+                    If there is an inquest, the permission of the coroner and the death certification must be obtained.
+                </li>
+                <li>
+                    You can get the idea for organs using the organ information page.
+                </li>
+                <li>
+                    You can get the idea for hospital using the hospital information page.
+                </li>
+                <li>
+                    You can find out  the available of  organs using the avaible of organs page
+                </li>
+            </ul>
         </div>
     </div>
 
+    <!-- OrganInformation -->
+    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Organ Information </div>
+    <div class="container flex-wrap justify-content-center col-7 mt-4 py-1">
+        <table>
+            
+            <tr class="thead">
+                <td class="heart col-1 c-fst" scope="col"></td>
+                <td class="col-1" scope="col-">Organ</td>
+                <td class="col-3" scope="col">Organ Type</td>
+                <td class="c-lst col-6"scope="col">Organ Details</td>
+            </tr>
+            
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Pancreas</td>
+                <td class=" c-orgt">Digestive</td>
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
+                    other vital functions.</td>
+            </tr>
+       
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Pancreas</td>
+                <td class=" c-orgt">Digestive</td>
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
+                    other vital functions.</td>
+            </tr>
+       
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Pancreas</td>
+                <td class=" c-orgt">Digestive</td>
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
+                    other vital functions.</td>
+            </tr>
+       
 
+        </table>
+    </div>
+
+    
     <!-- Footer -->
     <div class="container-fluid">
         <footer class="row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 pt-3 mt-5 px-5 border-top footer">

@@ -10,11 +10,7 @@
 .red {
     color: var(--red-t);
 }
-/* .ad:active {
 
-    background-color:green;
-    
-} */
 body {
     background-image: var(--bg-pic);
     background-color: var(--bg-color);
@@ -34,15 +30,9 @@ header {
     background-color: #ffffff;
     padding: 0px;
     box-shadow: 3px 3px 10px #d6d6d6;
-
 }
 
 .footer {
-    /* margin-top: 40px;
-    height: 160px;
-    left: 0px;
-    top: 0px; */
-
     background: #222222;
     border-radius: 12px 12px 0px 0px;
     color: white;
@@ -364,11 +354,67 @@ img.ftlogo {
     margin: 0%;
 }
 
-input::placeholder{
+input[type="text"]::placeholder {
     text-align: center;
     opacity: 50%;
 }
 
+
+tr {
+    border: 0;
+    margin: 5px;
+}
+
+.solid {
+    border: 2px red solid;
+    border-radius: 10px;
+}
+
+.dotted {
+    border: 2px green dotted;
+    border-radius: 10px;
+}
+
+.dashed {
+    border: 2px blue dashed;
+    border-radius: 10px;
+}
+
+td {
+    padding: 5px;
+}
+
+a.none {
+    text-decoration: none;
+    color: black;
+}
+
+a.none:hover {
+    color: #D50101;
+    font-weight: 450;
+    border-width: 2px;
+    transition: all .5s ease-in;
+}
+
+.btn.btn-signup:hover {
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 5px #fc000056);
+    transition: all .2s ease-in;
+}
+
+.btn.btn.btn-login:hover {
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 5px #8a8a8a7a);
+    transition: all .2s ease-in;
+}
+
+.btn.btn-getStart:hover {
+    background-color: #eb0202;
+    border: #D50101;
+    border-style: solid;
+    filter: drop-shadow(1px 1px 5px #fc000056);
+    transition: all .2s ease-in;
+}
 
 /*===========================================================*/
 
@@ -465,7 +511,6 @@ a.none:hover {
     color: #D50101;
     font-weight: 450;
     border-width: 2px;
-
     transition: all .5s ease-in;
 }
 

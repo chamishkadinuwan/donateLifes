@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <link rel="shortcut icon" href="../Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin pannel-New Donor</title>
@@ -32,11 +32,6 @@
                 <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
             </ul>
 
-            <div class="col-md-0 d-flex flex-wrap justify-content-center">
-                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
-                <button type="button" class="btn btn-signup">Signup</button>
-
-            </div>
         </header>
     </div>
 
@@ -54,7 +49,8 @@
                     <div class="ad"> <a href="AdPanConBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </a> </div>
                 </div>
 
-                <div class="adLog"> <button class="btn form">Logout</button></div>
+                <div class="adLog"> <a href="../HomePage.html" class="text-decoration-none"> <div class="btn form">Logout</div></a></div>
+
 
             </div>
 

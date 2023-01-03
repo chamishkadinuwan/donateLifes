@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <link rel="shortcut icon" href="../Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin pannel-New Donor</title>
@@ -34,11 +34,7 @@
                 <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
             </ul>
 
-            <div class="col-md-0 d-flex flex-wrap justify-content-center">
-                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
-                <button type="button" class="btn btn-signup">Signup</button>
 
-            </div>
         </header>
     </div>
 
@@ -49,14 +45,15 @@
                 <div class="adH">ADMIN PANEL</div>
 
                 <div class="adCon">
-                    <div class="ad mt-4 pt-4 red"> <i class="bi bi-house-heart-fill"></i> Dashboard</div>
-                    <div class="ad red"> <a href="AdPanNewDon.php" class="text-dark text-decoration-none" > <i class="bi bi-person-heart"></i> New Donor  </a></div>
+                    <div class="ad mt-4 pt-4 "> <i class="bi bi-house-heart-fill red"></i> Dashboard</div>
+                    <div class="ad red">  <i class="bi bi-person-heart"></i> New Donor </div>
                     <div class="ad red"> <a href="AdPanNewBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-heart"></i> New Benificiary </a></div>
-                    <div class="ad red"> <a href="AdPanConDon.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </a></div>
-                    <div class="ad red"> <a href="AdPanConBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </a> </div>
+                    <div class="ad"> <a href="AdPanConDon.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </a></div>
+                    <div class="ad"> <a href="AdPanConBen.php" class="text-dark text-decoration-none"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </a> </div>
                 </div>
 
-                <div class="adLog"> <button class="btn form">Logout</button></div>
+                <div class="adLog"> <a href="../HomePage.html" class="text-decoration-none"> <div class="btn form">Logout</div></a></div>
+
 
             </div>
 
