@@ -10,13 +10,12 @@ include "connection.php";
     $password1  = $_POST['repassword'];
     
     
-     $sql="insert into hospital_sign values('$hospital_id','$hospital_name','$email','$tp_no','$address','$password')";
+    $sql="insert into hospital_sign values('$hospital_id','$hospital_name','$email','$tp_no','$address','$password')";
     
         
-        if($password == $password1){
-            if($connection->query($sql) === TRUE){
-             echo "success";
-
+    if($password == $password1){
+        if($connection->query($sql) === TRUE){
+            header("location:hospitalinfo.html");
         }else{
             echo "failed";
         }
