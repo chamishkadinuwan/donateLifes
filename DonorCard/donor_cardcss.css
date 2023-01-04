@@ -1,0 +1,55 @@
+
+div{
+	width: 100%;
+	max-width: 400px;
+	background-image: url(../Images/BGPic.jpg);
+    background-size: cover;
+	margin: 0 auto;
+	padding: 1.5%;
+    color: #001256;
+    font-family: 'Rubik';
+    font-size: 12px;
+    
+}
+
+.last{
+    font-size: 7px;
+}
+p {
+	padding: 0;
+	margin: 0;
+	line-height: 14pt;
+}
+
+.centerText {
+	text-align: center;
+}
+
+
+
+
+/* 
+.card{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  background-image: url(../Images/BGPic.jpg);
+  display: block;
+  display: grid;
+  font-family: 'Trebuchet MS', sans-serif;
+  height: 100mm;
+  width: 150mm;
+  color: darkblue;
+  font-size: small;
+
+     background-color: aqua;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 500;
+    color: #D50101;
+    background-color: #E9E9E9;
+    box-shadow: 4px 4px 20px rgb(0 0 0 / 25%);
+} */
