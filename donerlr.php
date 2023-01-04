@@ -20,15 +20,16 @@
         
         if($password == $password1){
             if($statement->execute()){
-                echo "<script>Swal.fire(
-                    'Success',
-                    'Doner details added.',
-                    'success'
-                  ).then((result) => {
-                    if (result.isConfirmed) {
-                      window.location.href = 'HomePage.html';
-                    }
-                  })</script>";
+                // echo "<script>Swal.fire(
+                //     'Success',
+                //     'Doner details added.',
+                //     'success'
+                //   ).then((result) => {
+                //     if (result.isConfirmed) {
+                //       window.location.href = 'HomePage.html';
+                //     }
+                //   })</script>";
+                echo "suuuu";
 
         }else{
             echo "failed";

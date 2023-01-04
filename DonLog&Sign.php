@@ -44,7 +44,49 @@
             if ($statement->execute()) {
                 echo "<script>Swal.fire(
                     'Success',
-                    'beneficiary details added.',
+                    'Doner details added.',
+                    'success'
+                  ).then((result) => {
+                    if (result.isConfirmed) {
+                      window.location.href = 'HomePage.html';
+                    }
+                  })</script>";
+            } else {
+                echo "<script>Swal.fire(
+                    'Success',
+                    'faild'
+                  )
+                  })</script>";
+            }
+        } else {
+            echo "<script>Swal.fire(
+                'Success',
+                'faild'
+              )
+              })</script>";
+        }
+    }
+
+    if (array_key_exists("d", $_POST)) {
+
+        $name = $_POST['fname'];
+        $email  = $_POST['email'];
+        $telenumber = $_POST['tnum'];
+        $password  = $_POST['pw'];
+        $password1  = $_POST['repassword'];
+
+
+        $sql = "insert into logdoner(name,email,telenumber,password) values(?,?,?,?)";
+
+        $statement = $connection->prepare($sql);
+
+        $statement->bind_param("ssis", $name, $email, $telenumber, $password);
+
+        if ($password == $password1) {
+            if ($statement->execute()) {
+                echo "<script>Swal.fire(
+                    'Success',
+                    'Doner details added.',
                     'success'
                   ).then((result) => {
                     if (result.isConfirmed) {
@@ -62,8 +104,7 @@
         } else {
             echo "<script>Swal.fire(
                 'Success',
-                'beneficiary details added.',
-                'success'
+                'faild'
               )
               })</script>";
         }
@@ -129,6 +170,7 @@
 
                         <!-- Sign Up-->
                         <form action="#" method="post">
+<input type="hidden" name="d">
                             <div class="signup">
                                 <input type="hidden" name="c">
                                 <h2 class="form-title m-0" id="signup">
