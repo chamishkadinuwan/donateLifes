@@ -1,23 +1,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beneficiary Instructions</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-    </script>
-    <link href="css/style.css" rel="stylesheet">
+    <?php include("./header.php"); ?>
 </head>
 
 <body class="m-0 border-0">
-
-
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-3 container-fluid ">
@@ -86,11 +74,6 @@
         <a href="BeneficiaryForm.php"><button class="btn form">Beneficiary Form</button></a>
         <a href="dodosadds.php"><button class="btn form">Request an Organ</button></a>
     </div>
-
-
-
-
-
 
     <!-- Footer -->
     <div class="container-fluid">

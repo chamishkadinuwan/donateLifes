@@ -122,7 +122,7 @@
                     </div>
 
                     <!-- Login-->
-                    <form action="Beneficiarylogin.php" method="post" target="_blank">
+                    <form action="./database/function.php" method="post">
                         <div class="login slide-up">
 
                             <div class="center">
@@ -133,7 +133,7 @@
                                     <input type="email" class="input" placeholder="Email" name="email" required>
                                     <input type="password" class="input" placeholder="Password" name="pw" required>
                                 </div>
-                                <button type="submit" class="submit-btn">Login</button>
+                                <button type="submit" class="submit-btn" name="b_log_in">Login</button>
                                 <p class="forgotPw">Forgot password ?</p>
                             </div>
 

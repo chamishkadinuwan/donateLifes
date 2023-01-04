@@ -76,6 +76,35 @@
               })</script>";
     }
   }
+  if (array_key_exists("b_log_in", $_POST)) {
+    $email  = $_POST['email'];
+    $password  = $_POST['pw'];
+
+    $sql = "SELECT * FROM auth_beneficiary WHERE email='$email' AND password='$password'";
+
+    $result = $conn->query($sql);
+    if ($result->num_rows == 1) {
+      echo "<script>Swal.fire(
+                'Beneficiary Login',
+                'Beneficiary login successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Beneficiary Login',
+                'Beneficiary login failed! Check your email address and password',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BenLog&Sign.php';
+                }
+              })</script>";
+    }
+  }
 
   if (array_key_exists("b_sign_up", $_POST)) {
     $name = $_POST['fname'];
