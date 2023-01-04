@@ -42,7 +42,7 @@
     <div class="container whiteCard my-6">
         <div class="row d-flex justify-content-between">
             <div class="grayCardL col-3 px-2">
-                <div class="adH">ADMIN PANEL</div>
+                <div class="adH">HOSPITAL</div>
 
                 <div class="adCon">
                     <a href="AdPanDashBoard.php" class="text-dark text-decoration-none"><div class="ad mt-3 pt-2 red"> <i class="bi bi-house-heart-fill"></i> Dashboard</div></a>

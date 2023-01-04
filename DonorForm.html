@@ -15,6 +15,25 @@
         crossorigin="anonymous"></script>
         
     <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function toggleGroup(id) {
+            var group = document.getElementById(id);
+            var inputs = group.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].checked = (inputs[i].checked) ? false : true;
+            }
+
+        }
+        window.onload = function() {
+        document.getElementById("checkmain").onchange = function() {
+           toggleGroup("check_grp");
+
+        }
+        }
+        </script>
+
+
 </head>
 
 <body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
@@ -151,7 +170,24 @@
                             <input type="text" class="form-control" name="address" placeholder="Address" id="address"
                                 required>
                         </div>
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
+                            <span>
+                                <label for="check1">Full Body</label>
+                                <input type="checkbox" name="checkmain" id="checkmain" />
+                            </span>
+                            <p id="check_grp">
+                                <input type="checkbox" /><label for="check1">My Corness</label>
+                                <input type="checkbox" /><label for="check1">Liver</label>
+                                <input type="checkbox"  /><label for="check2">Heart</label><br>
+                                <input type="checkbox"  /><label for="check3">Lung</label>
+                                <input type="checkbox"  /><label for="check4">Kidney</label>
+                                <input type="checkbox"  /><label for="check5">Pancreas</label>
+                            </p>
+                        </div>
+                        
+<!--
+
+                        <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-person-heart"></i>
                             </span>
@@ -165,7 +201,7 @@
                                 <option value="Intestine">Intestine</option>
                                 <option value="">Pancreas</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -207,13 +243,13 @@
                             </select>
                         </div>
                         
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
+                        <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-envelope-open-heart-fill"></i>
                             </span>
                             <input type="email" class="form-control " name="email" placeholder="E-Mail" id="email"
                                 required>
-                        </div>
+                        </div> -->
 
                         
 
@@ -248,6 +284,9 @@
                         </div>
                     </div>
 
+                    <div class="row sm">
+                        Note: The information which you are entering in the above form is confidential and will be used only for purpose of organ donation and transplant processes and will not be shared/used for any other purpose.
+                    </div>
                     <!-- Clear & Submit Button -->
                     <div class="row ">
 

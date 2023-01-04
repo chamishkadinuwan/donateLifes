@@ -5,7 +5,7 @@
 html,
 body {
   min-height: 100vh;
-  background-color: #e1e8ee;
+  background-color: #E1E8EE;
   align-items: center;
   justify-content: center;
   font-family: "Rubik";
@@ -46,8 +46,7 @@ body {
   transform: translate(-50%, 0);
   transition: all 0.5s ease;
 }
-.container-form form .signup.slide-up .form-holder,
-.container-form form .signup.slide-up .submit-btn {
+.container-form form .signup.slide-up .form-holder, .container-form form .signup.slide-up .submit-btn {
   opacity: 0;
   visibility: hidden;
 }
@@ -103,7 +102,7 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 .container-form form .signup .submit-btn {
-  background-color: #cb0010;
+  background-color: #CB0010;
   color: rgb(255, 255, 255);
   border: 0;
   border-radius: 15px;
@@ -154,7 +153,7 @@ body {
   transition: all 0.5s ease;
 }
 .container-form form .login .center .form-title {
-  color: #d50101;
+  color: #D50101;
   font-size: 1.7em;
   text-align: center;
 }
@@ -196,16 +195,11 @@ body {
 .container-form form .login .center .form-holder .input:last-child {
   border-bottom: 0;
 }
-.container-form
-  form
-  .login
-  .center
-  .form-holder
-  .input::-webkit-input-placeholder {
+.container-form form .login .center .form-holder .input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 .container-form form .login .center .submit-btn {
-  background-color: #d50101;
+  background-color: #D50101;
   color: rgba(255, 255, 255, 0.7);
   border: 0;
   border-radius: 15px;
@@ -237,8 +231,7 @@ body {
   transform: translate(-50%, 0);
   transition: all 0.5s ease;
 }
-.container-form form .login.slide-up .form-holder,
-.container-form form .login.slide-up .submit-btn {
+.container-form form .login.slide-up .form-holder, .container-form form .login.slide-up .submit-btn {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
@@ -278,10 +271,10 @@ body {
   color: rgb(61, 153, 8);
 }
 
-input[class="input"]::placeholder {
+input[class=input]::placeholder {
   font-size: small;
   vertical-align: middle;
   color: rgb(209, 209, 209);
   text-align: center;
   opacity: 1;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
