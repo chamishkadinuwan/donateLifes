@@ -138,6 +138,40 @@
     }
   }
 
+  if (array_key_exists("h_sign_up", $_POST)) {
+    $hospital_id = $_POST['hid'];
+    $hospital_name = $_POST['fname'];
+    $email  = $_POST['email'];
+    $tp_no = $_POST['tnum'];
+    $address = $_POST['address'];
+    $password = $_POST['pw'];
+
+    $sql = "INSERT INTO auth_hospital VALUES(NULL,'$email','$password','$hospital_name','$address','$tp_no')";
+
+    if ($conn->query($sql) === TRUE) {
+      $_SESSION['user_email'] = $email;
+      echo "<script>Swal.fire(
+                'Hospital Registration',
+                'Hospital registerd successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Hospital Registration',
+                'Hospital registerd failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BenLog&Sign.php';
+                }
+              })</script>";
+    }
+  }
+
   if (array_key_exists("d_fill_form", $_POST)) {
     $nic = $_POST['NIC'];
     $dob = $_POST['Dob'];
