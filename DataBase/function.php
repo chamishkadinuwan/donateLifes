@@ -77,6 +77,38 @@
     }
   }
 
+  if (array_key_exists("b_sign_up", $_POST)) {
+    $name = $_POST['fname'];
+    $email  = $_POST['email'];
+    $telenumber = $_POST['tnum'];
+    $password  = $_POST['pw'];
+
+    $sql = "INSERT INTO auth_beneficiary VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL)";
+
+    if ($conn->query($sql) === TRUE) {
+      $_SESSION['user_email'] = $email;
+      echo "<script>Swal.fire(
+                'Beneficiary Registration',
+                'Beneficiary registerd successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Beneficiary Registration',
+                'Beneficiary registerd failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BenLog&Sign.php';
+                }
+              })</script>";
+    }
+  }
+
   if (array_key_exists("d_fill_form", $_POST)) {
     $nic = $_POST['NIC'];
     $dob = $_POST['Dob'];
@@ -115,6 +147,39 @@
               ).then((result) => {
                 if (result.isConfirmed) {
                   window.location.href = '../DonorForm.php';
+                }
+              })</script>";
+    }
+  }
+  if (array_key_exists("b_fill_form", $_POST)) {
+    $nic = $_POST['NIC'];
+    $dob = $_POST['Dob'];
+    $gender = $_POST['gender'];
+    $district = $_POST['district'];
+    $address = $_POST['address'];
+    $bg = $_POST['BloodGroup'];
+    $comments  = $_POST['comments'];
+
+    $sql = "UPDATE auth_beneficiary SET nic='$nic',dob='$dob',gender='$gender',address='$address',blood_group='$bg',district='$district',comment='$comments' WHERE email='" . $_SESSION['user_email'] . "'";
+
+    if ($conn->query($sql) === TRUE) {
+      echo "<script>Swal.fire(
+                'Beneficiary Profile Update',
+                'Beneficiary profile update successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Beneficiary Profile Update',
+                'Beneficiary profile update failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryForm.php';
                 }
               })</script>";
     }

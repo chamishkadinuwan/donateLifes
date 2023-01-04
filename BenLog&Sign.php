@@ -1,82 +1,13 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="Sass/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <?php include("./header.php"); ?>
     <link rel="stylesheet" href="Sass/Login/main.css">
 </head>
 
 <body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
 
-<?php
-
-     include "connection.php";
-    if(array_key_exists("c",$_POST)){
-
-  
-    $name = $_POST['fname'];
-    $email  = $_POST['email'];
-    $telenumber = $_POST['tnum'];
-    $password  = $_POST['pw'];
-    $password1  = $_POST['repassword'];
-
-    
-    $sql="insert into logandreg(name,email,telenumber,password) values(?,?,?,?)";
-
-    $statement=$connection->prepare ($sql);
-            
-    $statement -> bind_param("ssis",$name,$email,$telenumber,$password);
-        
-        if($password == $password1){
-            if($statement->execute()){
-                echo "<script>Swal.fire(
-                    'Success',
-                    'beneficiary details added.',
-                    'success'
-                  ).then((result) => {
-                    if (result.isConfirmed) {
-                      window.location.href = 'HomePage.php';
-                    }
-
-                  })</script>";
-            
-
-        }else{
-            echo "<script>Swal.fire(
-                'Success',
-                'beneficiary details added.',
-                'success'
-              ).then((result) => {
-                if (result.isConfirmed) {
-                  window.location.href = '';
-                }
-              })</script>";
-        }
-    }else{
-        echo"password don't match";
-    }
-        
-}
-       
-    
-
-
-?>
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-3 container-fluid ">
@@ -135,9 +66,9 @@
 
                     <div class="container-form">
                         <!-- Sign Up-->
-                        <form action="#" method="post" target="_blank">
+                        <form action="./database/function.php" method="post">
                             <div class="signup">
-<input type="hidden" name="c">
+
                                 <h2 class="form-title m-0" id="signup">
                                     <div>Don’t have an account? </div>Sign Up Benificiary
                                 </h2>
@@ -179,12 +110,12 @@
                                         <span class="input-group-text">
                                             <i class="bi bi-shield-lock-fill"></i>
                                         </span>
-                                        <input type="password" class="input" name="repassword" placeholder="Re-Enter Password"
-                                            id="uname" required>
+                                        <input type="password" class="input" name="repassword"
+                                            placeholder="Re-Enter Password" id="uname" required>
                                     </div>
 
                                 </div>
-                                <button type="submit" class="submit-btn">Sign Up</button>
+                                <button type="submit" class="submit-btn" name="b_sign_up">Sign Up</button>
 
 
                         </form>
@@ -217,31 +148,31 @@
         <!-- Script File -->
 
         <script>
-            console.clear();
-            const loginBtn = document.getElementById('login');
-            const signupBtn = document.getElementById('signup');
-            loginBtn.addEventListener('click', (e) => {
-                let parent = e.target.parentNode.parentNode;
-                Array.from(e.target.parentNode.parentNode.classList).find((element) => {
-                    if (element !== "slide-up") {
-                        parent.classList.add('slide-up')
-                    } else {
-                        signupBtn.parentNode.classList.add('slide-up')
-                        parent.classList.remove('slide-up')
-                    }
-                })
+        console.clear();
+        const loginBtn = document.getElementById('login');
+        const signupBtn = document.getElementById('signup');
+        loginBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode.parentNode;
+            Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+                if (element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                } else {
+                    signupBtn.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
             })
-            signupBtn.addEventListener('click', (e) => {
-                let parent = e.target.parentNode;
-                Array.from(e.target.parentNode.classList).find((element) => {
-                    if (element !== "slide-up") {
-                        parent.classList.add('slide-up')
-                    } else {
-                        loginBtn.parentNode.parentNode.classList.add('slide-up')
-                        parent.classList.remove('slide-up')
-                    }
-                })
+        })
+        signupBtn.addEventListener('click', (e) => {
+            let parent = e.target.parentNode;
+            Array.from(e.target.parentNode.classList).find((element) => {
+                if (element !== "slide-up") {
+                    parent.classList.add('slide-up')
+                } else {
+                    loginBtn.parentNode.parentNode.classList.add('slide-up')
+                    parent.classList.remove('slide-up')
+                }
             })
+        })
         </script>
 
     </div>
