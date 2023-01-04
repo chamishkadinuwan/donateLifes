@@ -18,7 +18,7 @@ $connection=new mysqli("localhost","root","","donatelife");
         if($data['password']==$password){
            session_start();
            $_SESSION['pass']=$data['password'];
-              header("location:HospitalInfo.html");
+              header("location:HospitalInfo.php");
             
 
         }else{

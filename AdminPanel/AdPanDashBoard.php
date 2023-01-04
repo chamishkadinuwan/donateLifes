@@ -23,12 +23,12 @@
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-3">
         <header class="d-flex flex-wrap justify-content-center px-5 py-3 mb-3 container-fluid ">
-            <a href="HomePage.html" class="d-flex align-items-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
+            <a href="HomePage.php" class="d-flex align-items-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                 <img src="../images/Logo.png" alt="" width="100" class="">
             </a>
 
             <ul class="nav nav-pills d-flex flex-wrap justify-content-center">
-                <li class="nav-item"><a href="HomePage.html" class="nav-link none" aria-current="#">Home</a></li>
+                <li class="nav-item"><a href="HomePage.php" class="nav-link none" aria-current="#">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link none">Organ Info</a></li>
                 <li class="nav-item"><a href="#" class="nav-link none">Hospital Info</a></li>
                 <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
@@ -54,7 +54,7 @@
                     <a href="AdPanConHos.php" class="text-dark text-decoration-none"><div class="ad">  <i class="bi bi-person-check-fill"></i> Confirmed Hospital </div></a>
                 </div>
 
-                <div class="adLog"> <a href="../HomePage.html" class="text-decoration-none">
+                <div class="adLog"> <a href="../HomePage.php" class="text-decoration-none">
                         <div class="btn form">Logout</div>
                     </a></div>
 

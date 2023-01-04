@@ -17,7 +17,7 @@ $connection=new mysqli("localhost","root","","donatelife");
         $data=$stmt_result ->fetch_assoc();
         if($data['password']==$password){
            
-              header("location: BeneficiaryInstruction.HTML");
+              header("location: BeneficiaryInstruction.php");
             
 
         }else{

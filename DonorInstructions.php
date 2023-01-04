@@ -5,17 +5,14 @@
     <link rel="shortcut icon" href="Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organ Information</title>
+    <title>Donor Instructions</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <link href="Sass/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
 </head>
 
 <body class="m-0 border-0">
@@ -27,7 +24,7 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
@@ -35,102 +32,62 @@
 
                     <div class="col-md-5"></div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-md-2">
+                    <!-- <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
+                            <a href="Login.php" class="nav-link none">
                                 <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
                             </a>
-                            <a href="GetStarted.html" class="nav-link none">
+                            <a href="GetStarted.php" class="nav-link none">
                                 <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
                             </a>
-                            <!--</div>-->
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
         </header>
     </div>
 
 
-
-    <!-- OrganInformation -->
-    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Organ Information </div>
-
-    <!-- Search bar -->
-    <div class="container search input-group-text input-group w-40 p-0">
-        <span class="ps-3" id="basic-addon1">
-            <i class="fi fi-bs-search"></i>
-        </span>
-        <input type="text" class="search size" placeholder="Search Here" aria-label="Input group example"
-            aria-describedby="basic-addon1" id="search_data">
+    <!-- Donor Instructions -->
+    <div class="d-flex justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Donor Instructions </div>
+    <div class="container flex-wrap justify-content-center card inst col-6 mt-4 py-4">
+        <div class="card inst-sub px-4 py-3 justify-content-top owerflow-auto">
+            <ul type="disk">
+                <li>
+                    The eyes should be removed four hours before death.Tissue retrieval must be done within 12 hours.
+                </li>
+                <li>
+                    Eye donation has no age limit but tissue can only be obtained from bodies under 70 years old.
+                </li>
+                <li>
+                    The cause of death must be mentioned.
+                </li>
+                <li>
+                    If there is an inquest, the permission of the coroner and the death certification must be obtained.
+                </li>
+                <li>
+                    If the whole body is given, all the body parts needed can be obtained.
+                </li>
+            </ul>
+        </div> 
     </div>
-
-    <!-- Table -->
-    <div class="container flex-wrap justify-content-center col-9 mt-4 py-1">
-        <table>
-            
-            <tr class="thead">
-                <td class="heart col-1 c-fst" scope="col"></td>
-                <td class="col-1" scope="col-">Organ</td>
-                <td class="col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-6"scope="col">Organ Details</td>
-            </tr>
-            
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
-       
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
-       
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
-       
-
-        </table>
+    <div class="container w-50 p-0 d-flex flex-wrap justify-content-end">
+        <button class="btn org-info">Organ Information</button>
+        <a href="DonorForm.php"><button class="btn form" >Donor Form</button></a>
     </div>
-
-
-    <div class="container col-9 d-flex flex-wrap justify-content-end p-0">
-        <a href="AvailableOfOrgan.html" class="nav-link none">
-        <button class="btn form">Available Organ List</button>
-        </a>
-    </div>
-
-
-
-
-
 
     <!-- Footer -->
     <div class="container-fluid">

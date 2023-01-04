@@ -11,27 +11,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-        
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+
     <link href="css/style.css" rel="stylesheet">
 
     <script type="text/javascript">
-        function toggleGroup(id) {
-            var group = document.getElementById(id);
-            var inputs = group.getElementsByTagName("input");
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].checked = (inputs[i].checked) ? false : true;
-            }
-
+    function toggleGroup(id) {
+        var group = document.getElementById(id);
+        var inputs = group.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checked = (inputs[i].checked) ? false : true;
         }
-        window.onload = function() {
+
+    }
+    window.onload = function() {
         document.getElementById("checkmain").onchange = function() {
-           toggleGroup("check_grp");
+            toggleGroup("check_grp");
 
         }
-        }
-        </script>
+    }
+    </script>
 
 
 </head>
@@ -45,7 +45,7 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
@@ -55,23 +55,23 @@
 
                     <div class="col-md-6">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
                     <!-- <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
+                            <a href="Login.php" class="nav-link none">
                                 <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
                             </a>
-                            <a href="GetStarted.html" class="nav-link none">
+                            <a href="GetStarted.php" class="nav-link none">
                                 <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
                             </a>
                         </div>
@@ -178,14 +178,14 @@
                             <p id="check_grp">
                                 <input type="checkbox" /><label for="check1">My Corness</label>
                                 <input type="checkbox" /><label for="check1">Liver</label>
-                                <input type="checkbox"  /><label for="check2">Heart</label><br>
-                                <input type="checkbox"  /><label for="check3">Lung</label>
-                                <input type="checkbox"  /><label for="check4">Kidney</label>
-                                <input type="checkbox"  /><label for="check5">Pancreas</label>
+                                <input type="checkbox" /><label for="check2">Heart</label><br>
+                                <input type="checkbox" /><label for="check3">Lung</label>
+                                <input type="checkbox" /><label for="check4">Kidney</label>
+                                <input type="checkbox" /><label for="check5">Pancreas</label>
                             </p>
                         </div>
-                        
-<!--
+
+                        <!--
 
                         <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
                             <span class="input-group-text">
@@ -242,7 +242,7 @@
 
                             </select>
                         </div>
-                        
+
                         <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-envelope-open-heart-fill"></i>
@@ -251,7 +251,7 @@
                                 required>
                         </div> -->
 
-                        
+
 
                     </div>
 
@@ -279,20 +279,24 @@
                             <span class="input-group-text">
                                 <i class="fi fi-sr-comment-alt"></i>
                             </span>
-                            <textarea placeholder="Comments" name="comments" class="form-control" id="exampleFormControlTextarea1"
-                                rows="2"></textarea>
+                            <textarea placeholder="Comments" name="comments" class="form-control"
+                                id="exampleFormControlTextarea1" rows="2"></textarea>
                         </div>
                     </div>
 
                     <div class="row sm">
-                        Note: The information which you are entering in the above form is confidential and will be used only for purpose of organ donation and transplant processes and will not be shared/used for any other purpose.
+                        Note: The information which you are entering in the above form is confidential and will be used
+                        only for purpose of organ donation and transplant processes and will not be shared/used for any
+                        other purpose.
                     </div>
                     <!-- Clear & Submit Button -->
                     <div class="row ">
 
                         <div class="form-group col-md-6 pt-3">
                             <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-                                <a href="DonorInstructions.html" class="text-decoration-none"><div class="btn form1">Cancle</div></a>
+                                <a href="DonorInstructions.php" class="text-decoration-none">
+                                    <div class="btn form1">Cancle</div>
+                                </a>
                             </div>
                         </div>
 

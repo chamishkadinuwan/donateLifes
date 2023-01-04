@@ -30,7 +30,7 @@
                     'success'
                   ).then((result) => {
                     if (result.isConfirmed) {
-                      window.location.href = 'HomePage.html';
+                      window.location.href = 'HomePage.php';
                     }
 
                   })</script>";

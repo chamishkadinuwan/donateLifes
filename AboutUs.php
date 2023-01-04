@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor Instructions</title>
+    <title>About Us</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -24,7 +24,7 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
@@ -32,62 +32,54 @@
 
                     <div class="col-md-5"></div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- <div class="col-md-2">
+                    <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
+                            <a href="Login.php" class="nav-link none">
                                 <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
                             </a>
-                            <a href="GetStarted.html" class="nav-link none">
+                            <a href="GetStarted.php" class="nav-link none">
                                 <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
                             </a>
+                            <!--</div>-->
                         </div>
-                    </div> -->
+                    </div>
 
                 </div>
         </header>
     </div>
 
 
-    <!-- Donor Instructions -->
-    <div class="d-flex justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Donor Instructions </div>
-    <div class="container flex-wrap justify-content-center card inst col-6 mt-4 py-4">
-        <div class="card inst-sub px-4 py-3 justify-content-top owerflow-auto">
-            <ul type="disk">
-                <li>
-                    The eyes should be removed four hours before death.Tissue retrieval must be done within 12 hours.
-                </li>
-                <li>
-                    Eye donation has no age limit but tissue can only be obtained from bodies under 70 years old.
-                </li>
-                <li>
-                    The cause of death must be mentioned.
-                </li>
-                <li>
-                    If there is an inquest, the permission of the coroner and the death certification must be obtained.
-                </li>
-                <li>
-                    If the whole body is given, all the body parts needed can be obtained.
-                </li>
-            </ul>
-        </div> 
+    <!-- About Us -->
+    <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> About Us</div>
+    <div class="container flex-wrap justify-content-center card aboutus col-6 mt-5 py-4">
+        <div class="card aboutus-sub px-4 py-3 justify-content-top owerflow-auto">
+            <p>
+                The Organ requesting , Donation and health care online Management System is designed to be used in any Hospital. By using this system, the main computer will take information from doners & Beneficiaries using wireless technology. The User information that is taken by system is communicates to the main computer through local wireless intranet. The main computer is the server that control all the system such as doner details, beneficiary details, organ details, hospitals details. The system has four main sections that doners section, applicant section, hospital section, organs section.
+            </p>
+            <p>
+                In doner section doners can crate account for themselves. They will register to the system to donate their organs. In applicant section beneficiaries also can create account for themselves and the will register to our system and beneficiaries can request organs what they needed. In hospital section we select some hospitals, and they will take care of doners and their organs. In organ section we will manage organs and will donate organs to requesting a beneficiaries according to their purpose.
+           
+            </p>
+        </div>
     </div>
-    <div class="container w-50 p-0 d-flex flex-wrap justify-content-end">
-        <button class="btn org-info">Organ Information</button>
-        <a href="DonorForm.HTML"><button class="btn form" >Donor Form</button></a>
-    </div>
+
+
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid">

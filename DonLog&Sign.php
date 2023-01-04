@@ -23,7 +23,7 @@
 <body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
 
     <?php
-    include "connection.php";
+
 
     if (array_key_exists("c", $_POST)) {
 
@@ -48,7 +48,7 @@
                     'success'
                   ).then((result) => {
                     if (result.isConfirmed) {
-                      window.location.href = 'HomePage.html';
+                      window.location.href = 'HomePage.php';
                     }
                   })</script>";
             } else {
@@ -90,7 +90,7 @@
                     'success'
                   ).then((result) => {
                     if (result.isConfirmed) {
-                      window.location.href = 'HomePage.html';
+                      window.location.href = 'HomePage.php';
                     }
                   })</script>";
             } else {
@@ -116,7 +116,7 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
@@ -126,23 +126,23 @@
 
                     <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
+                            <a href="Login.php" class="nav-link none">
                                 <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
                             </a>
-                            <a href="GetStarted.html" class="nav-link none">
+                            <a href="GetStarted.php" class="nav-link none">
                                 <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
                             </a>
 
@@ -152,9 +152,6 @@
                 </div>
         </header>
     </div>
-
-
-
 
     <div class="container">
         <div class="row">
@@ -170,7 +167,7 @@
 
                         <!-- Sign Up-->
                         <form action="#" method="post">
-<input type="hidden" name="d">
+                            <input type="hidden" name="d_sign_up">
                             <div class="signup">
                                 <input type="hidden" name="c">
                                 <h2 class="form-title m-0" id="signup">

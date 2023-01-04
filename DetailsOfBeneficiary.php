@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="Images/Icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details of Organs</title>
+    <title>Details of Beneficiary</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -20,38 +20,42 @@
 
 <body class="m-0 border-0">
 
+
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-3 container-fluid ">
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
                     </div>
 
-                    <div class="col-md-6"></div>
+                    <div class="col-md-5"></div>
 
                     <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <!--<button type="button" class="btn btn-login me-2" text-decoration-none>Login</button> -->
-                            <a href="GetStarted.html" class="nav-link none"><button type="button"
-                                    class="btn btn-signup ">Signup</button></a>
+                            <a href="Login.php" class="nav-link none">
+                                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
+                            </a>
+                            <a href="GetStarted.php" class="nav-link none">
+                                <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
+                            </a>
                             <!--</div>-->
                         </div>
                     </div>
@@ -60,8 +64,10 @@
         </header>
     </div>
 
-    <!--Details of Organs -->
-    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1">Details of Organs </div>
+
+
+    <!-- Details of Beneficiary -->
+    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1">Details of Beneficiary </div>
 
     <!-- Search bar -->
     <div class="container search input-group-text input-group w-40 p-0">
@@ -73,45 +79,58 @@
     </div>
 
     <!-- Table -->
-    <div class="container flex-wrap justify-content-center col-8 mt-4 py-1">
+    <div class="container flex-wrap justify-content-center col-9 mt-4 py-1">
         <table>
 
             <tr class="thead">
                 <td class="heart col-1 c-fst" scope="col"></td>
-                <td class="col-1" scope="col-">OrganID</td>
-                <td class="col-3" scope="col">Organ Name</td>
-                <td class=" col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-4" scope="col">Received Date & Time</td>
+                <td class="col-2" scope="col-">Reg.No</td>
+                <td class="col-2" scope="col">Full Name</td>
+                <td class=" col-2" scope="col">NIC No</td>
+                <td class="col-2" scope="col-">Address</td>
+                <td class="col-2" scope="col">DOB</td>
+                <td class="c-lst col-1" scope="col">Gender</td>
             </tr>
 
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>DLOR001</td>
-                <td class=" c-orgt">Liver</td>
-                <td class="c-orgt ">Digestive</td>
-                <td class="c-orgt c-lst col-4">2.59 AM 7/12/2022</td>
+
+                <td class=" c-orgt">DLD001</td>
+                <td class=" c-orgt">M.Lahiru Lakshitha</td>
+                <td class=" c-orgt">200086701415</td>
+                <td class=" c-orgt">N0.12,Deniyaya,Dikwalla</td>
+                <td class=" c-orgt">01/12/2000</td>
+                <td class=" c-orgt c-lst">M</td>
+
             </tr>
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>DLOR001</td>
-                <td class=" c-orgt">Liver</td>
-                <td class="c-orgt ">Digestive</td>
-                <td class="c-orgt c-lst">2.59 AM 7/12/2022</td>
+
+                <td class=" c-orgt">DLD001</td>
+                <td class=" c-orgt">M.Lahiru Lakshitha</td>
+                <td class=" c-orgt">200086701415</td>
+                <td class=" c-orgt">N0.12,Deniyaya</td>
+                <td class=" c-orgt">01/12/2000</td>
+                <td class=" c-orgt c-lst">M</td>
+
             </tr>
+
 
 
 
 
         </table>
     </div>
-    <div class="row">
-        <div class="container col-4 d-flex flex-wrap justify-content-end p-0">
-            <button class=" btn form1">Delete Recode</button>
-        </div>
-        <div class="container col-4 d-flex flex-wrap justify-content-left p-0">
-            <button class="btn form">Add New Recode</button>
-        </div>
+
+
+    <div class="container col-8 d-flex flex-wrap justify-content-end p-0">
+        <button class="btn form">Manage Records</button>
     </div>
+
+
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid">

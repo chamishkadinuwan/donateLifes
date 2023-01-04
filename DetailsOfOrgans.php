@@ -2,21 +2,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="Images/Icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Details of Organs</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <link href="Sass/main.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
 </head>
 
 <body class="m-0 border-0">
-
 
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
@@ -24,35 +26,32 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
                     </div>
 
-                    <div class="col-md-5"></div>
+                    <div class="col-md-6"></div>
 
                     <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-md-2">
+                    <div class="col-md-1">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
-                                <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
-                            </a>
-                            <a href="GetStarted.html" class="nav-link none">
-                                <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
-                            </a>
+                            <!--<button type="button" class="btn btn-login me-2" text-decoration-none>Login</button> -->
+                            <a href="GetStarted.php" class="nav-link none"><button type="button"
+                                    class="btn btn-signup ">Signup</button></a>
                             <!--</div>-->
                         </div>
                     </div>
@@ -61,25 +60,58 @@
         </header>
     </div>
 
+    <!--Details of Organs -->
+    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1">Details of Organs </div>
 
-    <!-- About Us -->
-    <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> About Us</div>
-    <div class="container flex-wrap justify-content-center card aboutus col-6 mt-5 py-4">
-        <div class="card aboutus-sub px-4 py-3 justify-content-top owerflow-auto">
-            <p>
-                The Organ requesting , Donation and health care online Management System is designed to be used in any Hospital. By using this system, the main computer will take information from doners & Beneficiaries using wireless technology. The User information that is taken by system is communicates to the main computer through local wireless intranet. The main computer is the server that control all the system such as doner details, beneficiary details, organ details, hospitals details. The system has four main sections that doners section, applicant section, hospital section, organs section.
-            </p>
-            <p>
-                In doner section doners can crate account for themselves. They will register to the system to donate their organs. In applicant section beneficiaries also can create account for themselves and the will register to our system and beneficiaries can request organs what they needed. In hospital section we select some hospitals, and they will take care of doners and their organs. In organ section we will manage organs and will donate organs to requesting a beneficiaries according to their purpose.
-           
-            </p>
-        </div>
+    <!-- Search bar -->
+    <div class="container search input-group-text input-group w-40 p-0">
+        <span class="ps-3" id="basic-addon1">
+            <i class="fi fi-bs-search"></i>
+        </span>
+        <input type="text" class="search size" placeholder="Search Here" aria-label="Input group example"
+            aria-describedby="basic-addon1">
     </div>
 
+    <!-- Table -->
+    <div class="container flex-wrap justify-content-center col-8 mt-4 py-1">
+        <table>
+
+            <tr class="thead">
+                <td class="heart col-1 c-fst" scope="col"></td>
+                <td class="col-1" scope="col-">OrganID</td>
+                <td class="col-3" scope="col">Organ Name</td>
+                <td class=" col-3" scope="col">Organ Type</td>
+                <td class="c-lst col-4" scope="col">Received Date & Time</td>
+            </tr>
+
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>DLOR001</td>
+                <td class=" c-orgt">Liver</td>
+                <td class="c-orgt ">Digestive</td>
+                <td class="c-orgt c-lst col-4">2.59 AM 7/12/2022</td>
+            </tr>
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>DLOR001</td>
+                <td class=" c-orgt">Liver</td>
+                <td class="c-orgt ">Digestive</td>
+                <td class="c-orgt c-lst">2.59 AM 7/12/2022</td>
+            </tr>
 
 
 
 
+        </table>
+    </div>
+    <div class="row">
+        <div class="container col-4 d-flex flex-wrap justify-content-end p-0">
+            <button class=" btn form1">Delete Recode</button>
+        </div>
+        <div class="container col-4 d-flex flex-wrap justify-content-left p-0">
+            <button class="btn form">Add New Recode</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div class="container-fluid">
@@ -97,20 +129,22 @@
                                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg> UOC, Faculty of Technology</a>
                     </li>
-                    <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-muted">
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link p-0 text-muted">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-telephone" viewBox="0 0 16 16">
                                 <path
                                     d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                             </svg> +94 77 1234 567</a>
                     </li>
-                    <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-muted">
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link p-0 text-muted">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-envelope" viewBox="0 0 16 16">
                                 <path
                                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                            </svg>
-                            organlife@gmail.com</a>
+                            </svg> organlife@gmail.com
+                        </a>
                     </li>
 
                 </ul>

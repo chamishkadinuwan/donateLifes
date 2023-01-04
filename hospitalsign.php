@@ -16,7 +16,7 @@ include "connection.php";
     if($password == $password1){
         if($connection->query($sql) === TRUE){
             echo "succes";
-            //header("location:hospitalinfo.html");
+            //header("location:hospitalinfo.php");
         }else{
             echo "failed";
         }

@@ -1,23 +1,20 @@
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organ Information</title>
-
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="Images/Icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate Life</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <link href="../WebPage/Sass/main.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="m-0 border-0">
+<body class=" m-0 border-0">
 
 
     <!-- Header -->
@@ -26,7 +23,7 @@
             <div class="container p-0 m-0">
                 <div class="row">
                     <div class="col-md-1 ">
-                        <a href="HomePage.html"
+                        <a href="HomePage.php"
                             class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                             <img src="images/Logo.png" alt="" width="100" class="">
                         </a>
@@ -36,23 +33,23 @@
 
                     <div class="col-md-4">
                         <ul class=" nav nav-pills flex-wrap justify-content-center">
-                            <li class="nav-item"><a href="HomePage.html" class="ps-2 nav-link none"
+                            <li class="nav-item"><a href="HomePage.php" class="ps-2 nav-link none"
                                     aria-current="#">Home</a>
                             </li>
-                            <li class="nav-item"><a href="OrganInfo.html" class="nav-link none">Organ Info</a></li>
-                            <li class="nav-item"><a href="HospitalInfo.html" class="nav-link none">Hospital Info</a>
+                            <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
+                            <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
                             </li>
-                            <li class="nav-item"><a href="BasicInstruction.html" class="nav-link none">Instruction</a>
+                            <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="col-md-2">
                         <div class="d-flex flex-wrap justify-content-center">
-                            <a href="Login.html" class="nav-link none">
+                            <a href="Login.php" class="nav-link none">
                                 <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
                             </a>
-                            <a href="GetStarted.html" class="nav-link none">
+                            <a href="GetStarted.php" class="nav-link none">
                                 <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
                             </a>
                             <!--</div>-->
@@ -65,77 +62,28 @@
 
 
 
-    <!-- OrganInformation -->
-    <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Organ Information </div>
 
-    <!-- Search bar -->
-    <div class="container search input-group-text input-group w-40 p-0">
-        <span class="ps-3" id="basic-addon1">
-            <i class="fi fi-bs-search"></i>
-        </span>
-        <input type="text" class="search size" placeholder="Search Here" aria-label="Input group example"
-            aria-describedby="basic-addon1">
+
+    <!-- Get Started -->
+
+    <div class="container get-start-card">
+        <div class="container align-items-center justify-content-center get-started-top">
+            Get Started
+        </div>
+        <div class="container row m-0 p-2">
+            <a href="DonLog&Sign.php" class="nav-link none">
+                <div class="container row col-r btn donor mt-4 mb-4">Donor</div>
+            </a>
+            <a href="BenLog&Sign.php" class="nav-link none">
+                <div class="container row col-r btn donor my-3.5 ">Beneficiary</div>
+            </a>
+            <a href="HospitalLog&Sign.php" class="nav-link none">
+                <div class="container row col-r btn donor my-4">Hospital</div>
+            </a>
+        </div>
     </div>
 
-    <!-- Table -->
-    <div class="container flex-wrap justify-content-center col-9 mt-4 py-1">
-        <table>
-
-            <tr class="thead">
-                <td class="heart col-1 c-fst" scope="col"></td>
-                <td class="col-1" scope="col-">Organ</td>
-                <td class="col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-6" scope="col">Organ Details</td>
-            </tr>
-
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund
-                    -reds of other vital functions.</td>
-            </tr>
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund
-                    -reds of other vital functions.</td>
-            </tr>
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund
-                    -reds of other vital functions.</td>
-            </tr>
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund
-                    -reds of other vital functions.</td>
-            </tr>
-
-
-
-        </table>
-    </div>
-
-
-    <div class="container col-9 d-flex flex-wrap justify-content-end p-0">
-        <button class="btn form">Available Organ List</button>
-    </div>
-
-
-
-
-
-
+    
     <!-- Footer -->
     <div class="container-fluid">
         <footer class="row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 pt-3 mt-5 px-5 border-top footer">
@@ -152,22 +100,20 @@
                                 <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                             </svg> UOC, Faculty of Technology</a>
                     </li>
-                    <li class="nav-item mb-3">
-                        <a href="#" class="nav-link p-0 text-muted">
+                    <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-muted">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-telephone" viewBox="0 0 16 16">
                                 <path
                                     d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
                             </svg> +94 77 1234 567</a>
                     </li>
-                    <li class="nav-item mb-3">
-                        <a href="#" class="nav-link p-0 text-muted">
+                    <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-muted">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-envelope" viewBox="0 0 16 16">
                                 <path
                                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
-                            </svg> organlife@gmail.com
-                        </a>
+                            </svg>
+                            organlife@gmail.com</a>
                     </li>
 
                 </ul>
@@ -194,6 +140,7 @@
 
         </footer>
     </div>
+
 
 </body>
 
