@@ -1,26 +1,40 @@
 <?php
-include "connection.php";
 
-    $hospital_id = $_POST['hid'];
-    $hospital_name = $_POST['fname'];
-    $email  = $_POST['email'];
-    $tp_no = $_POST['tnum'];
-    $address = $_POST['address'];
-    $password = $_POST['pw'];
-    $password1  = $_POST['repassword'];
-    
-    
-    $sql="insert into hospital_sign values('$hospital_id','$hospital_name','$email','$tp_no','$address','$password')";
-    
-        
-    if($password == $password1){
-        if($connection->query($sql) === TRUE){
-            header("location:hospitalinfo.html");
+$connection=new mysqli("localhost","root","","donatelife");
+
+    $email  = $_POST['email'];      
+    $password  = $_POST['pw']; 
+
+   if($connection -> connect_error){
+    die("connection error");
+  }else{
+    $statement=$connection->prepare ("select * from hospital_sign where email = ?");
+    $statement -> bind_param("s",$email);
+    $statement ->execute();
+    $stmt_result=$statement ->get_result();
+
+    if($stmt_result -> num_rows >0){
+        $data=$stmt_result ->fetch_assoc();
+        if($data['password']==$password){
+           session_start();
+           $_SESSION['pass']=$data['password'];
+              header("location:HospitalInfo.html");
+            
+
         }else{
-            echo "failed";
-        }
-    }else{
-        echo"password don't match";
-    }
+             
+             $alert="<script>alert('Invalid username or Password !');</script>";
+             echo $alert;
 
-    ?>
+             
+
+        }
+
+    }else{
+        echo "<h2>Invalid username or password</h2>";
+    }
+  }
+    
+
+
+?>

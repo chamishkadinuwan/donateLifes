@@ -1,3 +1,6 @@
+<head>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
 <?php
 
      include "connection.php";
@@ -17,7 +20,15 @@
         
         if($password == $password1){
             if($statement->execute()){
-             echo "success";
+                echo "<script>Swal.fire(
+                    'Success',
+                    'Doner details added.',
+                    'success'
+                  ).then((result) => {
+                    if (result.isConfirmed) {
+                      window.location.href = 'HomePage.html';
+                    }
+                  })</script>";
 
         }else{
             echo "failed";
