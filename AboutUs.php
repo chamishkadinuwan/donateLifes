@@ -1,18 +1,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <link href="css/style.css" rel="stylesheet">
+    <?php include("./header.php"); ?>
 </head>
 
 <body class="m-0 border-0">
@@ -67,11 +57,20 @@
     <div class="container flex-wrap justify-content-center card aboutus col-6 mt-5 py-4">
         <div class="card aboutus-sub px-4 py-3 justify-content-top owerflow-auto">
             <p>
-                The Organ requesting , Donation and health care online Management System is designed to be used in any Hospital. By using this system, the main computer will take information from doners & Beneficiaries using wireless technology. The User information that is taken by system is communicates to the main computer through local wireless intranet. The main computer is the server that control all the system such as doner details, beneficiary details, organ details, hospitals details. The system has four main sections that doners section, applicant section, hospital section, organs section.
+                The Organ requesting , Donation and health care online Management System is designed to be used in any
+                Hospital. By using this system, the main computer will take information from doners & Beneficiaries
+                using wireless technology. The User information that is taken by system is communicates to the main
+                computer through local wireless intranet. The main computer is the server that control all the system
+                such as doner details, beneficiary details, organ details, hospitals details. The system has four main
+                sections that doners section, applicant section, hospital section, organs section.
             </p>
             <p>
-                In doner section doners can crate account for themselves. They will register to the system to donate their organs. In applicant section beneficiaries also can create account for themselves and the will register to our system and beneficiaries can request organs what they needed. In hospital section we select some hospitals, and they will take care of doners and their organs. In organ section we will manage organs and will donate organs to requesting a beneficiaries according to their purpose.
-           
+                In doner section doners can crate account for themselves. They will register to the system to donate
+                their organs. In applicant section beneficiaries also can create account for themselves and the will
+                register to our system and beneficiaries can request organs what they needed. In hospital section we
+                select some hospitals, and they will take care of doners and their organs. In organ section we will
+                manage organs and will donate organs to requesting a beneficiaries according to their purpose.
+
             </p>
         </div>
     </div>

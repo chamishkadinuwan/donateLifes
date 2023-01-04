@@ -1,25 +1,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organ Information</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <link href="Sass/main.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <?php include("./header.php"); ?>
 </head>
 
 <body class="m-0 border-0">
-
 
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
@@ -81,41 +67,44 @@
     <!-- Table -->
     <div class="container flex-wrap justify-content-center col-9 mt-4 py-1">
         <table>
-            
+
             <tr class="thead">
                 <td class="heart col-1 c-fst" scope="col"></td>
                 <td class="col-1" scope="col-">Organ</td>
                 <td class="col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-6"scope="col">Organ Details</td>
+                <td class="c-lst col-6" scope="col">Organ Details</td>
             </tr>
-            
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
 
         </table>
     </div>
@@ -123,7 +112,7 @@
 
     <div class="container col-9 d-flex flex-wrap justify-content-end p-0">
         <a href="AvailableOfOrgan.php" class="nav-link none">
-        <button class="btn form">Available Organ List</button>
+            <button class="btn form">Available Organ List</button>
         </a>
     </div>
 

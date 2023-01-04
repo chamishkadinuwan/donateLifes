@@ -2,20 +2,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Donate Life</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <link href="Sass/main.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
+    <?php include("./header.php"); ?>
 </head>
 
 <body class=" m-0 border-0">
@@ -78,15 +66,15 @@
 
         <div class="row d-flex flex-wrap justify-content-left donateLifeCoverDis px-5 ">
             <a href="GetStarted.php" class="nav-link none">
-            <button class="btn btn-getStart">
-                Get Started
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-arrow-right"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                </svg>
-            </button>
-        </a>
+                <button class="btn btn-getStart">
+                    Get Started
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" fill="currentColor" class="bi bi-arrow-right"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg>
+                </button>
+            </a>
         </div>
 
     </div>
@@ -116,7 +104,7 @@
                     You can get the idea for hospital using the hospital information page.
                 </li>
                 <li>
-                    You can find out  the available of  organs using the avaible of organs page
+                    You can find out the available of organs using the avaible of organs page
                 </li>
             </ul>
         </div>
@@ -126,46 +114,49 @@
     <div class="d-flex container justify-content-center pt-4 pb-2 mb-4 red mt-3 h1"> Organ Information </div>
     <div class="container flex-wrap justify-content-center col-7 mt-4 py-1">
         <table>
-            
+
             <tr class="thead">
                 <td class="heart col-1 c-fst" scope="col"></td>
                 <td class="col-1" scope="col-">Organ</td>
                 <td class="col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-6"scope="col">Organ Details</td>
+                <td class="c-lst col-6" scope="col">Organ Details</td>
             </tr>
-            
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
                 <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the body’s blood
+                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
+                    body’s blood
                     supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
                     other vital functions.</td>
             </tr>
-       
+
 
         </table>
     </div>
 
-    
+
     <!-- Footer -->
     <div class="container-fluid">
         <footer class="row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 pt-3 mt-5 px-5 border-top footer">
