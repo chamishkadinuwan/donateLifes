@@ -1,39 +1,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="Images/Icon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donor Form</title>
-
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-    </script>
-
-    <link href="css/style.css" rel="stylesheet">
-
-    <script type="text/javascript">
-    function toggleGroup(id) {
-        var group = document.getElementById(id);
-        var inputs = group.getElementsByTagName("input");
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].checked = (inputs[i].checked) ? false : true;
-        }
-
-    }
-    window.onload = function() {
-        document.getElementById("checkmain").onchange = function() {
-            toggleGroup("check_grp");
-
-        }
-    }
-    </script>
-
-
+    <?php include("./header.php"); ?>
 </head>
 
 <body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
@@ -88,7 +57,7 @@
     <div class="container-fluid card donorform mt-4 w-50">
         <div class="container pt-0 pb-0 my-1 text-white ">
             <div class="form-group">
-                <form action="datainsert.php" method="post">
+                <form action="./database/function.php" method="post">
 
                     <!--Name & Telephone-->
                     <div class="row">
@@ -96,15 +65,20 @@
                             <span class="input-group-text">
                                 <i class="bi bi-person-fill"></i>
                             </span>
+                            <?php
+                            $sql = "SELECT * FROM auth_donor WHERE email='" . $_SESSION["user_email"] . "'";
+                            $result = $conn->query($sql);
+                            $row = $result->fetch_assoc();
+                            ?>
                             <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
-                                required>
+                                disabled value="<?php echo $row["name"]; ?>">
                         </div>
                         <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-telephone-fill"></i>
                             </span>
                             <input type="number" class="form-control" name="telenumber" placeholder="Telephone Number"
-                                id="telenumber" required>
+                                id="telenumber" disabled value="<?php echo $row["mobile"]; ?>">
                         </div>
                     </div>
 
@@ -145,15 +119,14 @@
                             </span>
                             <select class="text-center form-control" name="BloodGroup" placeholder="Blood Group"
                                 id="BloodGroup" required>
-                                <option selected>Blood Group</option>
-                                <option value="Liver">O+</option>
-                                <option value="Heart">O-</option>
-                                <option value="Lung">A+</option>
-                                <option value="Kidney">A-</option>
-                                <option value="Intestine">B+</option>
-                                <option value="">B-</option>
-                                <option value="">AB+</option>
-                                <option value="">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
                             </select>
                         </div>
 
@@ -171,37 +144,32 @@
                                 required>
                         </div>
                         <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
-                            <span>
+                            <div>
                                 <label for="check1">Full Body</label>
-                                <input type="checkbox" name="checkmain" id="checkmain" />
-                            </span>
-                            <p id="check_grp">
-                                <input type="checkbox" /><label for="check1">My Corness</label>
-                                <input type="checkbox" /><label for="check1">Liver</label>
-                                <input type="checkbox" /><label for="check2">Heart</label><br>
-                                <input type="checkbox" /><label for="check3">Lung</label>
-                                <input type="checkbox" /><label for="check4">Kidney</label>
-                                <input type="checkbox" /><label for="check5">Pancreas</label>
-                            </p>
+                                <input type="checkbox" name="organs[]" value="Full Body" />
+                            </div>
+                            <div>
+                                <label for="check1">Liver</label>
+                                <input type="checkbox" name="organs[]" value="Liver" />
+                            </div>
+                            <div>
+                                <label for="check1">Heart</label>
+                                <input type="checkbox" name="organs[]" value="Heart" />
+                            </div>
+                            <div>
+                                <label for="check1">Lung</label>
+                                <input type="checkbox" name="organs[]" value="Lung" />
+                            </div>
+                            <div>
+                                <label for="check1">Kidney</label>
+                                <input type="checkbox" name="organs[]" value="Kidney" />
+                            </div>
+                            <div>
+                                <label for="check1">Pancreas</label>
+                                <input type="checkbox" name="organs[]" value="Pancreas" />
+                            </div>
                         </div>
 
-                        <!--
-
-                        <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
-                            <span class="input-group-text">
-                                <i class="bi bi-person-heart"></i>
-                            </span>
-                            <select class="text-center form-control" name="typeoforgan" placeholder="Type of Organ"
-                                id="type of organ" required>
-                                <option selected>Type of Organ</option>
-                                <option value="Liver">Liver</option>
-                                <option value="Heart">Heart</option>
-                                <option value="Lung">Lung</option>
-                                <option value="Kidney">Kidney</option>
-                                <option value="Intestine">Intestine</option>
-                                <option value="">Pancreas</option>
-                            </select>
-                        </div> -->
                     </div>
 
 
@@ -238,8 +206,6 @@
                                 <option value="Jafna">Jafna</option>
                                 <option value="Galle">Galle</option>
                                 <option value="Anuradhapuraya">Anuradhapuraya</option>
-
-
                             </select>
                         </div>
 
@@ -302,30 +268,15 @@
 
                         <div class="form-group col-md-6 pt-3 ">
                             <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-                                <button type="submit" class="btn form2">Submit</button>
+                                <button type="submit" class="btn form2" name="d_fill_form">Submit</button>
                             </div>
                         </div>
 
                     </div>
-
-
-
-
                 </form>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <div class="container-fluid">
         <footer class="row flex-wrap row-cols-1 row-cols-sm-2 row-cols-md-3 pt-3 mt-5 px-5 border-top footer">

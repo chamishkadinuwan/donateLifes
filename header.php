@@ -2,6 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+include_once("./database/dbconn.php");
 ?>
 <link rel="shortcut icon" href="Images/Icon.png">
 <meta charset="UTF-8">

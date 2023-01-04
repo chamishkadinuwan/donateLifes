@@ -21,7 +21,7 @@
         $telenumber = $_POST['tnum'];
         $password  = $_POST['pw'];
 
-        $sql = "INSERT INTO auth_donor VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL,NULL,NULL)";
+        $sql = "INSERT INTO auth_donor VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL,NULL,NULL,NULL)";
 
         if ($conn->query($sql) === TRUE) {
             $_SESSION['user_email'] = $email;
@@ -42,6 +42,49 @@
               ).then((result) => {
                 if (result.isConfirmed) {
                   window.location.href = '../DonLog&Sign.php';
+                }
+              })</script>";
+        }
+    }
+
+    if (array_key_exists("d_fill_form", $_POST)) {
+        $nic = $_POST['NIC'];
+        $dob = $_POST['Dob'];
+        $gender = $_POST['gender'];
+        $district = $_POST['district'];
+        $address = $_POST['address'];
+        $bg = $_POST['BloodGroup'];
+        $typeoforgan = $_POST['organs'];
+        $nn = $_POST['nomineename'];
+        $nm = $_POST['nomineephonenumber'];
+        $comments  = $_POST['comments'];
+        $organs = "";
+        foreach ($typeoforgan as $value) {
+            $organs = $organs . "," . $value;
+        }
+        if (preg_match("/\b(Full Body)\b/", $organs)) {
+            $organs = "Full Body";
+        }
+        $sql = "UPDATE auth_donor SET nic='$nic',dob='$dob',gender='$gender',address='$address',type_of_organ='$organs',blood_group='$bg',district='$district',nominee_name='$nn',nominee_mobile='$nm',comment='$comments' WHERE email='" . $_SESSION['user_email'] . "'";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "<script>Swal.fire(
+                'Donor Profile Update',
+                'Donor profile update successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../pdf.php';
+                }
+              })</script>";
+        } else {
+            echo "<script>Swal.fire(
+                'Donor Profile Update',
+                'Donor profile update failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../DonorForm.php';
                 }
               })</script>";
         }
