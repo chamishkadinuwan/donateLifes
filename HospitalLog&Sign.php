@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
@@ -20,7 +20,53 @@
 
 <body style="background-image: url(Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
 
-
+    <?php
+    
+    if (array_key_exists("d", $_POST)) {
+    include "connection.php";
+    
+        $hospital_id = $_POST['hid'];
+        $hospital_name = $_POST['fname'];
+        $email  = $_POST['email'];
+        $tp_no = $_POST['tnum'];
+        $address = $_POST['address'];
+        $password = $_POST['pw'];
+        $password1  = $_POST['repassword'];
+        
+        
+        $sql="insert into hospital_sign values('$hospital_id','$hospital_name','$email','$address','$tp_no','$password')";
+        
+        if ($password == $password1) {
+            
+            if ($connection->query($sql) === TRUE) {
+                echo "<script>Swal.fire(
+                    'Success',
+                    'Hospital details added.',
+                    'success'
+                  ).then((result) => {
+                    if (result.isConfirmed) {
+                      window.location.href = 'HomePage.html';
+                    }
+                  })</script>";
+                  
+            } else {
+                echo "<script>Swal.fire(
+                    'faild',
+                    'faild'
+                  )
+                  })</script>";
+            }
+        } else {
+            echo "<script>Swal.fire(
+                'Success',
+                'faild'
+              )
+              })</script>";
+        }
+    }
+    
+    ?>
+            
     <!-- Header -->
     <div class="container-fluid flex-wrap bg-light p-0 mb-4 col-md-12">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-3 container-fluid ">
@@ -80,11 +126,11 @@
 
                         <div class="container-form">
                             <!-- Sign Up-->
-                            <form action="hospitalsign.php" method="post" >
+                            <form action="#" method="post" >
                                 <div class="signup">
-
+                                    <input type="hidden" name="d">
                                     <h2 class="form-title m-0" id="signup">
-                                        <div>Don’t have an account? </div>Sign Up
+                                        <div>Don't have an account? </div>Sign Up
                                     </h2>
                                     <div class="form-holder fcard mt-4">
                                         <table>
