@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 08:12 AM
+-- Generation Time: Jan 05, 2023 at 09:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.30
 
@@ -44,14 +44,24 @@ CREATE TABLE `auth_beneficiary` (
   `email` varchar(200) NOT NULL,
   `password` varchar(100) NOT NULL,
   `name` varchar(200) NOT NULL,
-  `nic` varchar(12) NOT NULL,
-  `dob` date NOT NULL,
-  `gender` varchar(6) NOT NULL,
-  `address` varchar(200) NOT NULL,
+  `nic` varchar(12) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
   `mobile` varchar(10) NOT NULL,
-  `district` varchar(50) NOT NULL,
-  `blood_group` varchar(10) NOT NULL
+  `district` varchar(50) DEFAULT NULL,
+  `blood_group` varchar(10) DEFAULT NULL,
+  `comment` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `auth_beneficiary`
+--
+
+INSERT INTO `auth_beneficiary` (`id`, `email`, `password`, `name`, `nic`, `dob`, `gender`, `address`, `mobile`, `district`, `blood_group`, `comment`) VALUES
+(1, 'sdfsdf@fgfg', 'gmj', 'dfg', NULL, NULL, NULL, NULL, '87654', NULL, NULL, NULL),
+(2, 'qwer@wefef.weggwer', '1', 'qweqwe', '1234567890', '2023-01-06', 'Female', 'rthjh,hmg', '1234567890', 'Galle', 'Kidney', 'dfghjjhbwfegrthtyuirew'),
+(3, 'wef@wefewf.rhgtrh', '1', 'qwdqw', NULL, NULL, NULL, NULL, '12345678', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -64,17 +74,25 @@ CREATE TABLE `auth_donor` (
   `email` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   `name` varchar(200) NOT NULL,
-  `nic` varchar(12) NOT NULL,
-  `dob` date NOT NULL,
-  `gender` varchar(6) NOT NULL,
-  `address` varchar(200) NOT NULL,
+  `nic` varchar(12) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `gender` varchar(6) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
   `mobile` varchar(10) NOT NULL,
-  `type_of_organ` varchar(50) NOT NULL,
-  `blood_group` varchar(10) NOT NULL,
-  `district` varchar(50) NOT NULL,
-  `nominee_name` varchar(200) NOT NULL,
-  `nominee_mobile` varchar(10) NOT NULL
+  `type_of_organ` varchar(50) DEFAULT NULL,
+  `blood_group` varchar(10) DEFAULT NULL,
+  `district` varchar(50) DEFAULT NULL,
+  `nominee_name` varchar(200) DEFAULT NULL,
+  `nominee_mobile` varchar(10) DEFAULT NULL,
+  `comment` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `auth_donor`
+--
+
+INSERT INTO `auth_donor` (`id`, `email`, `password`, `name`, `nic`, `dob`, `gender`, `address`, `mobile`, `type_of_organ`, `blood_group`, `district`, `nominee_name`, `nominee_mobile`, `comment`) VALUES
+(14, 'ruwan@gmail.com', '1', 'Ruwan', '1234567890', '2023-01-20', 'Male', '2ttyukjhgfefghj', '1234567890', 'Full Body', 'B', 'Jafna', 'werthef', '1234567890', 'efwethrgfwfegrtrjythgef');
 
 -- --------------------------------------------------------
 
@@ -152,13 +170,13 @@ ALTER TABLE `auth_admin`
 -- AUTO_INCREMENT for table `auth_beneficiary`
 --
 ALTER TABLE `auth_beneficiary`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `auth_donor`
 --
 ALTER TABLE `auth_donor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `auth_hospital`

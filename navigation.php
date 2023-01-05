@@ -3,7 +3,7 @@
         <div class="container p-0 m-0">
             <div class="row">
                 <div class="col-md-1 ">
-                    <a href="HomePage.php"
+                    <a href="index.php"
                         class="d-flex justify-content-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
                         <img src="images/Logo.png" alt="" width="100" class="">
                     </a>
@@ -25,13 +25,23 @@
 
                 <div class="col-md-2">
                     <div class="d-flex flex-wrap justify-content-center">
-                        <a href="Login.php" class="nav-link none">
-                            <button type="button" class="btn btn-login me-2" text-decoration-none>Login</button>
+                        <?php
+                        if (array_key_exists("user_email", $_SESSION)) {
+                        ?>
+
+                        <a href="./database/logout.php" class="nav-link none">
+                            <button type="button" class="btn btn-signup me-2" text-decoration-none>Logout</button>
                         </a>
+
+                        <?php } else { ?>
                         <a href="GetStarted.php" class="nav-link none">
-                            <button type="button" class="btn btn-signup me-2" text-decoration-none>Signup</button>
+                            <button type="button" class="btn btn-signup me-2" text-decoration-none>Authenticate</button>
                         </a>
-                        <!--</div>-->
+                        <?php   }
+                        ?>
+
+
+
                     </div>
                 </div>
 
