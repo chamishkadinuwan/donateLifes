@@ -105,6 +105,35 @@
               })</script>";
     }
   }
+  if (array_key_exists("h_log_in", $_POST)) {
+    $email  = $_POST['email'];
+    $password  = $_POST['pw'];
+
+    $sql = "SELECT * FROM auth_hospital WHERE email='$email' AND password='$password'";
+
+    $result = $conn->query($sql);
+    if ($result->num_rows == 1) {
+      echo "<script>Swal.fire(
+                'Hospital Login',
+                'Hospital login successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../OrganForm.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Hospital Login',
+                'Hospital login failed! Check your email address and password',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../HospitalLog&Sign.php';
+                }
+              })</script>";
+    }
+  }
 
   if (array_key_exists("b_sign_up", $_POST)) {
     $name = $_POST['fname'];
@@ -156,7 +185,7 @@
                 'success'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../BeneficiaryInstruction.php';
+                  window.location.href = '../OrganForm.php';
                 }
               })</script>";
     } else {
@@ -166,11 +195,12 @@
                 'error'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../BenLog&Sign.php';
+                  window.location.href = '../HospitalLog&Sign.php';
                 }
               })</script>";
     }
   }
+
 
   if (array_key_exists("d_fill_form", $_POST)) {
     $nic = $_POST['NIC'];
