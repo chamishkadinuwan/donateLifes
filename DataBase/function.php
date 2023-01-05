@@ -25,6 +25,7 @@
 
     if ($conn->query($sql) === TRUE) {
       $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "D";
       echo "<script>Swal.fire(
                 'Donor Registration',
                 'Donor registerd successfully',
@@ -55,6 +56,8 @@
 
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
+      $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "D";
       echo "<script>Swal.fire(
                 'Donor Login',
                 'Donor login successfully',
@@ -84,6 +87,8 @@
 
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
+      $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "B";
       echo "<script>Swal.fire(
                 'Beneficiary Login',
                 'Beneficiary login successfully',
@@ -113,6 +118,8 @@
 
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
+      $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "H";
       echo "<script>Swal.fire(
                 'Hospital Login',
                 'Hospital login successfully',
@@ -145,6 +152,7 @@
 
     if ($conn->query($sql) === TRUE) {
       $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "B";
       echo "<script>Swal.fire(
                 'Beneficiary Registration',
                 'Beneficiary registerd successfully',
@@ -179,6 +187,7 @@
 
     if ($conn->query($sql) === TRUE) {
       $_SESSION['user_email'] = $email;
+      $_SESSION['user_type'] = "H";
       echo "<script>Swal.fire(
                 'Hospital Registration',
                 'Hospital registerd successfully',
