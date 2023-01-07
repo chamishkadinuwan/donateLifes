@@ -287,6 +287,24 @@
     }
   }
 
+  if (array_key_exists("getDonerInfo", $_POST)) {
+
+    $nic = $_POST['nic'];
+    $data = "";
+    $sql = "SELECT * FROM auth_donor WHERE nic='$nic'";
+    $result = $__conn->query($sql);
+    if ($result->num_rows == 1) {
+      $row = $result->fetch_assoc();
+      $data = ['code' => 'code_2', 'user_id' => $row['id']];
+    } else {
+      $data = ['code' => 'code_1'];
+    }
+    header('Content-type: application/json');
+    echo json_encode($data);
+  }
+
+
+
   ?>
 </body>
 
