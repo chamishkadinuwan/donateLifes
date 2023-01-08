@@ -238,7 +238,7 @@
                 'success'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../pdf.php';
+                  window.location.href = '../DonorCard/donorCard.php';
                 }
               })</script>";
     } else {
