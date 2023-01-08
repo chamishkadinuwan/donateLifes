@@ -42,7 +42,7 @@
 
                 <div class="adCon">
                     <a href="AdPanDashBoard.php" class="text-dark text-decoration-none"><div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div></a>
-                    <a href="AdPanNewDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-heart"></i> New Donor </div></a>
+                    <a href="AdPanNewDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div></a>
                     <a href="AdPanNewBen.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> New Benificiary </div></a>
                     <a href="AdPanNewHos.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> New Hospital </div></a>
                     <!-- <a href="AdPanConDon.php" class="text-dark text-decoration-none"><div class="ad  red"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </div></a> -->

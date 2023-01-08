@@ -1,12 +1,11 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../Images/Icon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin pannel-New Donor</title>
+    <title>View Benificiary</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -32,25 +31,136 @@
                 <li class="nav-item"><a href="#" class="nav-link none">Hospital Info</a></li>
                 <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
             </ul>
+
+        </header>
     </div>
-    <form action="./adminuser.php" method="post">
+
+    <!-- Card Wite -->
     <div class="container whiteCard my-6">
-    <div class="row">
-        <div class="w-20 input-group flex-nowrap form-group  col-md-6  pt-3 ">
-            <span class="input-group-text">
-                <i class="fi fi-sr-comment-alt"></i>
-            </span>
-            <textarea placeholder="NIC" name="nic" class="form-control"
-                id="nic"></textarea>
+        <div class="row d-flex justify-content-between">
+            <div class="grayCardL col-3 px-2">
+                <div class="adH">ADMIN PANEL</div>
+
+                <div class="adCon">
+                    <a href="AdPanDashBoard.php" class="text-dark text-decoration-none"><div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div></a>
+                    <a href="AdPanViewDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div></a>
+                    <a href="AdPanViewBen.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> View Benificiary </div></a>
+                    <a href="AdPanViewHos.php" class="text-dark text-decoration-none red"><div class="ad "> <i class="bi bi-person-heart"></i> View Hospital </div></a>
+                    <!-- <a href="AdPanConDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </div></a>
+                    <a href="AdPanConBen.php" class="text-dark text-decoration-none"><div class="ad red">  <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </div></a>
+                    <a href="AdPanConHos.php" class="text-dark text-decoration-none"><div class="ad">  <i class="bi bi-person-check-fill"></i> Confirmed Hospital </div></a> -->
+                </div>
+
+                <div class="adLog"> <a href="../HomePage.php" class="text-decoration-none">
+                        <div class="btn form">Logout</div>
+                    </a></div>
+
+
+            </div>
+
+            <div class="grayCardR col-9 px-4">
+
+                <div class="adH"><i class="bi bi-person-heart pe-3"></i> VIEW HOSPITALS </div>
+
+                <div class="adCard d-flex align-content-center flex-wrap">
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card" style="width: 18rem;">
+
+                        <div class="card-body m-2 p-3">
+                            <h5 class="card-title mb-3">Kusal Mendis</h5>
+                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
+                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
+
+                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-            <button type="submit" class="btn form2" name="b_fill_form">Submit</button>
-        </div>
+
     </div>
 
-                    
 
-                    
+
 
 
 
