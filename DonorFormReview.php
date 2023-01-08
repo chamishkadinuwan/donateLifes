@@ -14,9 +14,7 @@
     $sql = "SELECT * FROM auth_donor WHERE email='" . $_SESSION["user_email"] . "'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
-    if ($row['type_of_organ'] != "") {
-        header("location:DonorFormReview.php");
-    }
+
     ?>
     <!--donor form-->
     <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> Donor Form</div>
@@ -39,8 +37,8 @@
                             <span class="input-group-text">
                                 <i class="bi bi-telephone-fill"></i>
                             </span>
-                            <input type="text" class="form-control" name="telenumber" placeholder="Telephone Number"
-                                id="telenumber" disabled value="<?php echo $row["mobile"]; ?>">
+                            <input type="number" class="form-control" name="telenumber" placeholder="Telephone Number"
+                                id="telenumber" disabled value="<?php echo $row["mobile"]; ?>" disabled>
                         </div>
                     </div>
 
@@ -50,7 +48,8 @@
                             <span class="input-group-text">
                                 <i class="bi bi-person-badge-fill"></i>
                             </span>
-                            <input type="Text" class="form-control" name="NIC" placeholder="NIC" id="nic" required>
+                            <input type="Text" class="form-control" name="NIC" placeholder="NIC" id="nic" required
+                                value="<?php echo $row["nic"]; ?>" disabled>
                         </div>
                         <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
@@ -58,7 +57,8 @@
 
                             </span>
                             <input type="date" class="text-center text-uppercase form-control" name="Dob"
-                                placeholder="Date of Birth" id="date" required>
+                                placeholder="Date of Birth" id="date" required value="<?php echo $row["dob"]; ?>"
+                                disabled>
                         </div>
                     </div>
 
@@ -69,8 +69,8 @@
                                 <i class="fi fi-sr-venus-mars"></i>
                             </span>
                             <div class="form-control">
-                                <input type="radio" value="Male" name="gender" placeholder="Male"> Male
-                                <input type="radio" value="Female" name="gender" placeholder="Female"> Female
+                                <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
+                                    disabled value="<?php echo $row["gender"]; ?>">
                             </div>
                         </div>
 
@@ -79,17 +79,8 @@
                             <span class="input-group-text">
                                 <i class="bi bi-droplet-fill"></i>
                             </span>
-                            <select class="text-center form-control" name="BloodGroup" placeholder="Blood Group"
-                                id="BloodGroup" required>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="B+">B+</option>
-                                <option value="B">B-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                            </select>
+                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
+                                disabled value="<?php echo $row["blood_group"]; ?>">
                         </div>
 
 
@@ -103,33 +94,11 @@
                                 <i class="fi fi-sr-marker"></i>
                             </span>
                             <input type="text" class="form-control" name="address" placeholder="Address" id="address"
-                                required>
+                                required value="<?php echo $row["address"]; ?>" disabled>
                         </div>
                         <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
-                            <div>
-                                <label for="check1">Full Body</label>
-                                <input type="checkbox" name="organs[]" value="Full Body" />
-                            </div>
-                            <div>
-                                <label for="check1">Liver</label>
-                                <input type="checkbox" name="organs[]" value="Liver" />
-                            </div>
-                            <div>
-                                <label for="check1">Heart</label>
-                                <input type="checkbox" name="organs[]" value="Heart" />
-                            </div>
-                            <div>
-                                <label for="check1">Lung</label>
-                                <input type="checkbox" name="organs[]" value="Lung" />
-                            </div>
-                            <div>
-                                <label for="check1">Kidney</label>
-                                <input type="checkbox" name="organs[]" value="Kidney" />
-                            </div>
-                            <div>
-                                <label for="check1">Pancreas</label>
-                                <input type="checkbox" name="organs[]" value="Pancreas" />
-                            </div>
+                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
+                                disabled value="<?php echo $row["type_of_organ"]; ?>">
                         </div>
 
                     </div>
@@ -141,34 +110,8 @@
                             <span class="input-group-text">
                                 <i class="fi fi-sr-marker"></i>
                             </span>
-                            <select class="text-center form-control justify-content-center" name="district"
-                                placeholder="District" id="district" required>
-                                <option selected>District</option>
-                                <option value="Hambantota">Hambantota</option>
-                                <option value="Matara">Matara</option>
-                                <option value="Gampaha">Gampaha</option>
-                                <option value="Badulla">Badulla</option>
-                                <option value="Monaragala">Monaragala</option>
-                                <option value="Kandy">Kandy</option>
-                                <option value="Rathnapura">Rathnapura</option>
-                                <option value="Kaluthara">Kaluthara</option>
-                                <option value="Colombo">Colombo</option>
-                                <option value="Jafna">Jafna</option>
-                                <option value="Galle">Galle</option>
-                                <option value="Anuradhapuraya">Anuradhapuraya</option>
-                                <option value="Polonnaruwa">Polonnaruwa</option>
-                                <option value="Mathale">Mathale</option>
-                                <option value="wavniya">Wavniya</option>
-                                <option value="Mannaram">Mannaram</option>
-                                <option value="Madakalapuwa">Madakalapuwa</option>
-                                <option value="Maha Nuwara">Maha Nuwara</option>
-                                <option value="Rathnapura">Rathnapura</option>
-                                <option value="Kaluthara">Kaluthara</option>
-                                <option value="Colombo">Colombo</option>
-                                <option value="Jafna">Jafna</option>
-                                <option value="Galle">Galle</option>
-                                <option value="Anuradhapuraya">Anuradhapuraya</option>
-                            </select>
+                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
+                                disabled value="<?php echo $row["district"]; ?>">
                         </div>
 
                         <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
@@ -190,14 +133,15 @@
                                 <i class="bi bi-person-fill"></i>
                             </span>
                             <input type="text" class="form-control" name="nomineename" placeholder="Nominee Name"
-                                id="nominee name" required>
+                                id="nominee name" required value="<?php echo $row["nominee_name"]; ?>" disabled>
                         </div>
                         <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-telephone-fill"></i>
                             </span>
-                            <input type="text" class="form-control " name="nomineephonenumber"
-                                placeholder="Nominee Phone Number" id="nominee phone number" maxlength="10" required>
+                            <input type="number" class="form-control " name="nomineephonenumber"
+                                placeholder="Nominee Phone Number" id="nominee phone number" maxlength="10" required
+                                value="<?php echo $row["nominee_mobile"]; ?>" disabled>
                         </div>
                     </div>
 
@@ -207,8 +151,8 @@
                             <span class="input-group-text">
                                 <i class="fi fi-sr-comment-alt"></i>
                             </span>
-                            <textarea placeholder="Comments" name="comments" class="form-control"
-                                id="exampleFormControlTextarea1" rows="2"></textarea>
+                            <textarea disabled placeholder="Comments" name="comments" class="form-control"
+                                id="exampleFormControlTextarea1" rows="2"><?php echo $row["comment"]; ?></textarea>
                         </div>
                     </div>
 
@@ -217,25 +161,19 @@
                         only for purpose of organ donation and transplant processes and will not be shared/used for any
                         other purpose.
                     </div>
-                    <!-- Clear & Submit Button -->
-                    <div class="row ">
-
-                        <div class="form-group col-md-6 pt-3">
-                            <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-                                <a href="DonorInstructions.php" class="text-decoration-none">
-                                    <div class="btn form1">Cancle</div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-md-6 pt-3 ">
-                            <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-                                <button type="submit" class="btn form2" name="d_fill_form">Submit</button>
-                            </div>
-                        </div>
-
-                    </div>
                 </form>
+                <!-- Clear & Submit Button -->
+                <div class="row ">
+                    <div class="form-group col-md-6 pt-3 ">
+                        <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
+                            <a href="./DonorCard/donorCard.php?nic=<?php echo $row["id"]; ?>"><button class="btn form2"
+                                    name="d_fill_form">Get
+                                    Card</button></a>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     </div>
