@@ -287,21 +287,6 @@
     }
   }
 
-  if (array_key_exists("getDonerInfo", $_POST)) {
-
-    $nic = $_POST['nic'];
-    $data = "";
-    $sql = "SELECT * FROM auth_donor WHERE nic='$nic'";
-    $result = $conn->query($sql);
-    if ($result->num_rows == 1) {
-      $row = $result->fetch_assoc();
-      $data = ['code' => 'code_2', 'user_id' => $row['id'], 'name' => $row['name'], 'nic' => $row['nic'], 'dob' => $row['dob'], 'gender' => $row['gender'], 'address' => $row['address'], 'mobile' => $row['mobile'], 'type_of_organ' => $row['type_of_organ'], 'blood_group' => $row['blood_group']];
-    } else {
-      $data = ['code' => 'code_1'];
-    }
-    header('Content-type: application/json');
-    echo json_encode($data);
-  }
 
 
 
