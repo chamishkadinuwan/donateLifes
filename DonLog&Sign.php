@@ -21,9 +21,40 @@
             <div class="col-6 d-flex align-items-center justify-content-center">
                 <div class="">
                     <div class="container-form">
+                        <script>
+                        function checkValidate() {
+                            let re = document.getElementById("repass").value;
+                            let pw = document.getElementById("pw").value;
+                            if (pw == "") {
+                                Swal.fire(
+                                    'Required Field',
+                                    'Enter the password',
+                                    'warning'
+                                )
+                                return false;
+                            }
+                            if (re == "") {
+                                Swal.fire(
+                                    'Required Field',
+                                    'Enter the confirm password',
+                                    'warning'
+                                )
+                                return false;
+                            }
 
+                            if (re != pw) {
+                                Swal.fire(
+                                    'Inavlid data',
+                                    'Enterd passwords don\'t match',
+                                    'warning'
+                                )
+                                return false;
+                            }
+                            return true;
+                        }
+                        </script>
                         <!-- Sign Up-->
-                        <form action="./database/function.php" method="post">
+                        <form action="./database/function.php" onsubmit="return checkValidate()" method="post">
                             <input type="hidden" name="d_sign_up">
                             <div class="signup">
                                 <h2 class="form-title m-0" id="signup">
@@ -68,7 +99,7 @@
                                             <i class="bi bi-shield-lock-fill"></i>
                                         </span>
                                         <input type="password" class="input" name="repassword"
-                                            placeholder="Re-Enter Password" id="uname" required>
+                                            placeholder="Re-Enter Password" id="repass" required>
                                     </div>
 
                                 </div>

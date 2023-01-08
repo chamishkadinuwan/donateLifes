@@ -20,7 +20,7 @@
     $email  = $_POST['email'];
     $telenumber = $_POST['tnum'];
     $password  = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "INSERT INTO auth_donor VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL,NULL,NULL,NULL)";
 
     if ($conn->query($sql) === TRUE) {
@@ -51,7 +51,7 @@
   if (array_key_exists("d_log_in", $_POST)) {
     $email  = $_POST['email'];
     $password  = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "SELECT * FROM auth_donor WHERE email='$email' AND password='$password'";
 
     $result = $conn->query($sql);
@@ -82,7 +82,7 @@
   if (array_key_exists("b_log_in", $_POST)) {
     $email  = $_POST['email'];
     $password  = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "SELECT * FROM auth_beneficiary WHERE email='$email' AND password='$password'";
 
     $result = $conn->query($sql);
@@ -113,7 +113,7 @@
   if (array_key_exists("h_log_in", $_POST)) {
     $email  = $_POST['email'];
     $password  = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "SELECT * FROM auth_hospital WHERE email='$email' AND password='$password'";
 
     $result = $conn->query($sql);
@@ -126,7 +126,7 @@
                 'success'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../OrganForm.php';
+                  window.location.href = '../HospitalMenu.php';
                 }
               })</script>";
     } else {
@@ -147,7 +147,7 @@
     $email  = $_POST['email'];
     $telenumber = $_POST['tnum'];
     $password  = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "INSERT INTO auth_beneficiary VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL)";
 
     if ($conn->query($sql) === TRUE) {
@@ -182,7 +182,7 @@
     $tp_no = $_POST['tnum'];
     $address = $_POST['address'];
     $password = $_POST['pw'];
-
+    $password = md5($password);
     $sql = "INSERT INTO auth_hospital VALUES(NULL,'$email','$password','$hospital_name','$address','$tp_no')";
 
     if ($conn->query($sql) === TRUE) {
@@ -194,7 +194,7 @@
                 'success'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../OrganForm.php';
+                  window.location.href = '../HospitalMenu.php';
                 }
               })</script>";
     } else {
@@ -238,7 +238,7 @@
                 'success'
               ).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = '../pdf.php';
+                  window.location.href = '../DonorCard/donorCard.php?nic='.$nic;
                 }
               })</script>";
     } else {
@@ -286,6 +286,24 @@
               })</script>";
     }
   }
+
+  if (array_key_exists("getDonerInfo", $_POST)) {
+
+    $nic = $_POST['nic'];
+    $data = "";
+    $sql = "SELECT * FROM auth_donor WHERE nic='$nic'";
+    $result = $__conn->query($sql);
+    if ($result->num_rows == 1) {
+      $row = $result->fetch_assoc();
+      $data = ['code' => 'code_2', 'user_id' => $row['id']];
+    } else {
+      $data = ['code' => 'code_1'];
+    }
+    header('Content-type: application/json');
+    echo json_encode($data);
+  }
+
+
 
   ?>
 </body>
