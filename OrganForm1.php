@@ -46,15 +46,55 @@
                             xhttp.onreadystatechange = function() {
                                 if (this.readyState == 4 && this.status == 200) {
                                     let x = JSON.parse(xhttp.responseText);
-                                    if (x.code === "code_1") {
-                                        window.location.href = "OrganDonor.php";
-                                    } else if (x.code === "code_2") {
+                                    if (x.code === "code_2") {
+                                        Swal.fire({
+                                            title: 'Donor Details',
+                                            icon: 'info',
+                                            html: '<b>Name : </b> ' + x.name +
+                                                '<br><b>Date of Birth : </b> ' + x.dob +
+                                                '<br><b>Gender : </b> ' + x.gender +
+                                                '<br><b>Address : </b> ' + x.address +
+                                                '<br><b>Mobile : </b> ' + x.mobile +
+                                                '<br><b>Type Of Organ : </b> ' + x.type_of_organ +
+                                                '<br><b>Blood Group : </b> ' + x.blood_group,
+                                            showCloseButton: true,
+                                            showCancelButton: true,
+                                            focusConfirm: false,
+                                            confirmButtonText: 'Confirm',
+                                            cancelButtonText: 'Cancel',
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+
+                                                let data = new FormData();
+                                                data.append('type', x.type_of_organ);
+                                                data.append('blood', x.blood_group);
+                                                data.append('nic', mobile);
+                                                data.append('updateOrgan', 'true');
+
+                                                var xhttp = new XMLHttpRequest();
+                                                xhttp.onreadystatechange = function() {
+                                                    if (this.readyState == 4 && this.status == 200) {
+                                                        let x = JSON.parse(xhttp.responseText);
+                                                        if (x.code === "code_2") {
+                                                            Swal.fire("Success",
+                                                                "Organ added to database", "error");
+                                                        } else if (x.code === "code_1") {
+                                                            Swal.fire("Error",
+                                                                "System Error", "error");
+                                                        }
+                                                    }
+                                                };
+                                                xhttp.open("POST", "./database/con_function.php", true);
+                                                xhttp.send(data);
+                                            }
+                                        })
+                                    } else if (x.code === "code_1") {
                                         Swal.fire("Invalid NIC",
                                             "Invalid NIC number", "error");
                                     }
                                 }
                             };
-                            xhttp.open("POST", "../database/function.php", true);
+                            xhttp.open("POST", "./database/con_function.php", true);
                             xhttp.send(data);
                         }
                         </script>

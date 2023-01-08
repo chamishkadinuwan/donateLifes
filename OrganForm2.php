@@ -9,12 +9,40 @@
 
     <?php include("./navigation.php"); ?>
 
+
+
     <!--Beneficiary form-->
     <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> Organ Form</div>
     <div class="container-fluid card beneficiaryform mt-4 w-50">
         <div class="container pt-0 pb-0 my-1 text-white ">
             <div class="form-group">
-                <div>
+                <form action="./database/function.php" method="post">
+                    <!--Name & Telephone-->
+                    <div class="row">
+                        <?php
+                        $sql = "SELECT * FROM auth_beneficiary WHERE email='" . $_SESSION["user_email"] . "'";
+                        $result = $conn->query($sql);
+                        $row = $result->fetch_assoc();
+                        ?>
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
+                                disabled value="<?php echo $row["name"]; ?>">
+                        </div>
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i> </span>
+                            <select class="text-center form-control" name="DonorType" placeholder="Donor Type"
+                                id="DonorType" required>
+                                <option value="registered">Registered</option>
+                                <option value="unregistered">unregistered</option>
+
+                            </select>
+                        </div>
+                    </div>
+
                     <!-- NIC & DOB-->
                     <div class=" row ">
                         <div class=" w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
@@ -23,48 +51,101 @@
                             </span>
                             <input type="Text" class="form-control" name="NIC" placeholder="NIC" id="nic" required>
                         </div>
-                        <div class="form-group col-md-6 pt-3 ">
-                            <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
-                                <button class="btn form2 m-0 mt-2" onclick="checkDonor()">Check</button>
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                            <span class="input-group-text">
+                                <i class="bi bi-droplet-fill"></i>
+                            </span>
+                            <select class="text-center form-control" name="OrganType" placeholder="Organ Type"
+                                id="OrgaType" required>
+                                <option value="Liver">Liver</option>
+                                <option value="Heart">Heart</option>
+                                <option value="Lung">Lung</option>
+                                <option value="Kidney">Kidney</option>
+                                <option value="Pancreas">Pancreas</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Gender & Blood Broup-->
+                    <div class="row">
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
+                            <span class="input-group-text">
+                                <i class="fi fi-sr-venus-mars"></i>
+                            </span>
+                            <div class="form-control">
+                                <input type="radio" value="Male" name="gender" placeholder="Male"> Male
+                                <input type="radio" value="Female" name="gender" placeholder="Female"> Female
                             </div>
                         </div>
 
-                        <script>
-                        function checkDonor() {
-                            let mobile = document.getElementById('nic').value;
-                            if (mobile === "") {
-                                Swal.fire("Empty Field",
-                                    "Please enter NIC number of the Donor company mobile to continue", "warning");
-                                return;
-                            }
 
-                            let data = new FormData();
-                            data.append('nic', mobile);
-                            data.append('getDonerInfo', 'true');
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                            <span class="input-group-text">
+                                <i class="bi bi-droplet-fill"></i>
+                            </span>
+                            <select class="text-center form-control" name="BloodGroup" placeholder="Blood Group"
+                                id="BloodGroup" required>
+                                <option value="Liver">O+</option>
+                                <option value="Heart">O-</option>
+                                <option value="Lung">A+</option>
+                                <option value="Kidney">A-</option>
+                                <option value="Intestine">B+</option>
+                                <option value="">B-</option>
+                                <option value="">AB+</option>
+                                <option value="">AB-</option>
+                            </select>
+                        </div>
 
-                            var xhttp = new XMLHttpRequest();
-                            xhttp.onreadystatechange = function() {
-                                if (this.readyState == 4 && this.status == 200) {
-                                    let x = JSON.parse(xhttp.responseText);
-                                    if (x.code === "code_1") {
-                                        window.location.href = "OrganDonor.php";
-                                    } else if (x.code === "code_2") {
-                                        Swal.fire("Invalid NIC",
-                                            "Invalid NIC number", "error");
-                                    }
-                                }
-                            };
-                            xhttp.open("POST", "../database/function.php", true);
-                            xhttp.send(data);
-                        }
-                        </script>
 
 
                     </div>
-                </div>
+
+
+                    <!-- Comment -->
+                    <div class="row">
+                        <div class="w-20 input-group flex-nowrap form-group  col-md-6  pt-3 ">
+                            <span class="input-group-text">
+                                <i class="fi fi-sr-comment-alt"></i>
+                            </span>
+                            <textarea placeholder="Comments" name="comments" class="form-control"
+                                id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <!-- Clear & Submit Button -->
+                    <div class="row ">
+
+                        <div class="form-group col-md-6 pt-3">
+                            <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
+                                <button type="reset" class="btn form1">Cancel</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6 pt-3 ">
+                            <div class="container w-50 p-0 d-flex flex-wrap justify-content-center">
+                                <button type="submit" class="btn form2" name="b_fill_form">Submit</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </form>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid">

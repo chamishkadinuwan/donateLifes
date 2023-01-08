@@ -21,7 +21,7 @@
     $telenumber = $_POST['tnum'];
     $password  = $_POST['pw'];
     $password = md5($password);
-    $sql = "INSERT INTO auth_donor VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL,NULL,NULL,NULL)";
+    $sql = "INSERT INTO auth_donor VALUES(NULL,'$email','$password','$name',NULL,NULL,NULL,NULL,'$telenumber',NULL,NULL,NULL,NULL,NULL,NULL,1)";
 
     if ($conn->query($sql) === TRUE) {
       $_SESSION['user_email'] = $email;
@@ -292,16 +292,17 @@
     $nic = $_POST['nic'];
     $data = "";
     $sql = "SELECT * FROM auth_donor WHERE nic='$nic'";
-    $result = $__conn->query($sql);
+    $result = $conn->query($sql);
     if ($result->num_rows == 1) {
       $row = $result->fetch_assoc();
-      $data = ['code' => 'code_2', 'user_id' => $row['id']];
+      $data = ['code' => 'code_2', 'user_id' => $row['id'], 'name' => $row['name'], 'nic' => $row['nic'], 'dob' => $row['dob'], 'gender' => $row['gender'], 'address' => $row['address'], 'mobile' => $row['mobile'], 'type_of_organ' => $row['type_of_organ'], 'blood_group' => $row['blood_group']];
     } else {
       $data = ['code' => 'code_1'];
     }
     header('Content-type: application/json');
     echo json_encode($data);
   }
+
 
 
 
