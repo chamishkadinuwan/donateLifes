@@ -47,22 +47,16 @@
                     You can use login and signup page for your purposes.
                 </li>
                 <li>
-                    If you can donate the organs then you can use to login as the donor.
+                    If you want to donate the organs then you can use to signup / login as the Donor in Get Started page.
                 </li>
-                <li>
-                    If you can request the organs then you cna use to login as the beneficiary.
+                <li>    
+                    If you want to request the organs then you can use to signup / login as the Beneficiary in Get Started page.
                 </li>
                 <li>
                     If there is an inquest, the permission of the coroner and the death certification must be obtained.
                 </li>
                 <li>
                     You can get the idea for organs using the organ information page.
-                </li>
-                <li>
-                    You can get the idea for hospital using the hospital information page.
-                </li>
-                <li>
-                    You can find out the available of organs using the avaible of organs page
                 </li>
             </ul>
         </div>
@@ -76,40 +70,39 @@
             <tr class="thead">
                 <td class="heart col-1 c-fst" scope="col"></td>
                 <td class="col-1" scope="col-">Organ</td>
-                <td class="col-3" scope="col">Organ Type</td>
+
                 <td class="c-lst col-6" scope="col">Organ Details</td>
             </tr>
 
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
+                <td>Corneas</td>
+                <td class="tdetails c-lst">The cornea is a transparent avascular tissue that acts as a structural barrier and protects the eye against infections.</td>
+            </tr>
+
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Kidneys</td>
+                <td class="tdetails c-lst">(KID-nee) One of a pair of organs in the abdomen. The kidneys remove waste and extra water from the blood (as urine) and help keep chemicals (such as sodium, potassium, and calcium) balanced in the body. The kidneys also make hormones that help control blood pressure and stimulate bone marrow to make red blood cells.</td>
+            </tr>
+
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Heart</td>
+                <td class="tdetails c-lst">The heart is an organ about the size of your fist that pumps blood through your body. It is made up of multiple layers of tissue. Your heart is at the center of your circulatory system.</td>
+            </tr>
+
+            <tr>
+                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+                <td>Lungs</td>
+                <td class="tdetails c-lst">One of a pair of organs in the chest that supplies the body with oxygen, and removes carbon dioxide from the body.</td>
             </tr>
 
             <tr>
                 <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
                 <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
+                <td class="tdetails c-lst">The pancreas is an organ and a gland. Glands are organs that produce and release substances in the body. The pancreas performs two main functions: Exocrine function: Produces substances (enzymes) that help with digestion. Endocrine function: Sends out hormones that control the amount of sugar in your bloodstream.</td>
             </tr>
-
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body’s blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
-
 
         </table>
     </div>

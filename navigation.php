@@ -12,12 +12,11 @@
                 <div class="col-md-5"></div>
 
                 <div class="col-md-4">
-                    <ul class=" nav nav-pills flex-wrap justify-content-center">
+                    <ul class=" nav nav-pills flex-wrap justify-content-end">
                         <li class="nav-item"><a href="index.php" class="ps-2 nav-link none" aria-current="#">Home</a>
                         </li>
                         <li class="nav-item"><a href="OrganInfo.php" class="nav-link none">Organ Info</a></li>
-                        <li class="nav-item"><a href="HospitalInfo.php" class="nav-link none">Hospital Info</a>
-                        </li>
+                        
                         <li class="nav-item"><a href="BasicInstruction.php" class="nav-link none">Instruction</a>
                         </li>
                     </ul>

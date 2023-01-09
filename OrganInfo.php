@@ -25,53 +25,54 @@
 
     <!-- Table -->
     <div class="container flex-wrap justify-content-center col-9 mt-4 py-1">
-        <table>
+    <table>
 
-            <tr class="thead">
-                <td class="heart col-1 c-fst" scope="col"></td>
-                <td class="col-1" scope="col-">Organ</td>
-                <td class="col-3" scope="col">Organ Type</td>
-                <td class="c-lst col-6" scope="col">Organ Details</td>
-            </tr>
+<tr class="thead">
+    <td class="heart col-1 c-fst" scope="col"></td>
+    <td class="col-1" scope="col-">Organ</td>
 
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body's blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
+    <td class="c-lst col-6" scope="col">Organ Details</td>
+</tr>
 
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body's blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
+<tr>
+    <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+    <td>Corneas</td>
+    <td class="tdetails c-lst">The cornea is a transparent avascular tissue that acts as a structural barrier and protects the eye against infections.</td>
+</tr>
 
-            <tr>
-                <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
-                <td>Pancreas</td>
-                <td class=" c-orgt">Digestive</td>
-                <td class="tdetails c-lst">The liver is the largest solid organ in the body.It removes toxins from the
-                    body's blood
-                    supply,maintains healthy blood sugar levels,regulates blood clotting and performs hund -reds of
-                    other vital functions.</td>
-            </tr>
-        </table>
+<tr>
+    <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+    <td>Kidneys</td>
+    <td class="tdetails c-lst">(KID-nee) One of a pair of organs in the abdomen. The kidneys remove waste and extra water from the blood (as urine) and help keep chemicals (such as sodium, potassium, and calcium) balanced in the body. The kidneys also make hormones that help control blood pressure and stimulate bone marrow to make red blood cells.</td>
+</tr>
+
+<tr>
+    <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+    <td>Heart</td>
+    <td class="tdetails c-lst">The heart is an organ about the size of your fist that pumps blood through your body. It is made up of multiple layers of tissue. Your heart is at the center of your circulatory system.</td>
+</tr>
+
+<tr>
+    <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+    <td>Lungs</td>
+    <td class="tdetails c-lst">One of a pair of organs in the chest that supplies the body with oxygen, and removes carbon dioxide from the body.</td>
+</tr>
+
+<tr>
+    <td class="heart c-fst" scope="row"><i class="bi bi-heart-fill"></i></th>
+    <td>Pancreas</td>
+    <td class="tdetails c-lst">The pancreas is an organ and a gland. Glands are organs that produce and release substances in the body. The pancreas performs two main functions: Exocrine function: Produces substances (enzymes) that help with digestion. Endocrine function: Sends out hormones that control the amount of sugar in your bloodstream.</td>
+</tr>
+
+</table>
     </div>
 
 
-    <div class="container col-9 d-flex flex-wrap justify-content-end p-0">
+    <!-- <div class="container col-9 d-flex flex-wrap justify-content-end p-0">
         <a href="AvailableOfOrgan.php" class="nav-link none">
             <button class="btn form">Available Organ List</button>
         </a>
-    </div>
+    </div> -->
 
 
 

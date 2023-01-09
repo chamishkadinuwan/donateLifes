@@ -24,19 +24,13 @@
                     If you can donate the organs then you cna use to login as the donor.
                 </li>
                 <li>
-                    If you can request the organs then you cna use to login as the beneficiary.
+                    If you can request the organs then you can use to login as the beneficiary.
                 </li>
                 <li>
                     If there is an inquest, the permission of the coroner and the death certification must be obtained.
                 </li>
                 <li>
                     You can get the idea for organs using the organ information page.
-                </li>
-                <li>
-                    You can get the idea for hospital using the hospital information page.
-                </li>
-                <li>
-                    You can find out the available of organs using the avaible of organs page
                 </li>
             </ul>
         </div>

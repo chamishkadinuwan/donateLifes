@@ -21,7 +21,7 @@
     <!--donor form-->
     <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> Donor Form</div>
     <div class="container-fluid card donorform mt-4 w-50">
-        <div class="container pt-0 pb-0 my-1 text-white ">
+        <div class="container pt-0 pb-0 my-1">
             <div class="form-group">
                 <form action="./database/function.php" method="post">
 
@@ -118,18 +118,6 @@
                                 <label for="check1">Heart</label>
                                 <input type="checkbox" name="organs[]" value="Heart" />
                             </div>
-                            <div>
-                                <label for="check1">Lung</label>
-                                <input type="checkbox" name="organs[]" value="Lung" />
-                            </div>
-                            <div>
-                                <label for="check1">Kidney</label>
-                                <input type="checkbox" name="organs[]" value="Kidney" />
-                            </div>
-                            <div>
-                                <label for="check1">Pancreas</label>
-                                <input type="checkbox" name="organs[]" value="Pancreas" />
-                            </div>
                         </div>
 
                     </div>
@@ -170,7 +158,20 @@
                                 <option value="Anuradhapuraya">Anuradhapuraya</option>
                             </select>
                         </div>
-
+                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
+                            <div>
+                                <label for="check1">Lung</label>
+                                <input type="checkbox" name="organs[]" value="Lung" />
+                            </div>
+                            <div>
+                                <label for="check1">Kidney</label>
+                                <input type="checkbox" name="organs[]" value="Kidney" />
+                            </div>
+                            <div>
+                                <label for="check1">Pancreas</label>
+                                <input type="checkbox" name="organs[]" value="Pancreas" />
+                            </div>
+                        </div>
                         <!-- <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-envelope-open-heart-fill"></i>
@@ -212,11 +213,11 @@
                         </div>
                     </div>
 
-                    <div class="row sm">
-                        Note: The information which you are entering in the above form is confidential and will be used
+                    <small class="row --bs-dark">
+                        Note: The information which you are entering in the above form is confidential and will<br> be used
                         only for purpose of organ donation and transplant processes and will not be shared/used for any
                         other purpose.
-                    </div>
+                    </small>
                     <!-- Clear & Submit Button -->
                     <div class="row ">
 
