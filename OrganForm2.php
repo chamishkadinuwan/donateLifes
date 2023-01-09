@@ -13,45 +13,27 @@
 
     <!--Beneficiary form-->
     <div class="d-flex justify-content-center pt-3 pb-0 mb-0 red mt-3 h1"> Organ Form</div>
-    <div class="container-fluid card beneficiaryform mt-4 w-50">
+    <div class="container-fluid card beneficiaryform mt-4 w-50 content-align-center">
         <div class="container pt-0 pb-0 my-1 text-white ">
             <div class="form-group">
                 <form action="./database/function.php" method="post">
                     <!--Name & Telephone-->
-                    <div class="row">
-                        <?php
-                        $sql = "SELECT * FROM auth_beneficiary WHERE email='" . $_SESSION["user_email"] . "'";
-                        $result = $conn->query($sql);
-                        $row = $result->fetch_assoc();
-                        ?>
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
-                            <span class="input-group-text">
-                                <i class="bi bi-person-fill"></i>
-                            </span>
-                            <input type="text" class="form-control" name="fname" placeholder="Full Name" id="fname"
-                                disabled value="<?php echo $row["name"]; ?>">
-                        </div>
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
-                            <span class="input-group-text">
-                                <i class="bi bi-person-fill"></i> </span>
-                            <select class="text-center form-control" name="DonorType" placeholder="Donor Type"
-                                id="DonorType" required>
-                                <option value="registered">Registered</option>
-                                <option value="unregistered">unregistered</option>
-
-                            </select>
-                        </div>
-                    </div>
+                    
 
                     <!-- NIC & DOB-->
                     <div class=" row ">
-                        <div class=" w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                        <div class=" w-100 input-group flex-nowrap form-group col-md-6 pt-3 ">
                             <span class=" input-group-text">
                                 <i class="bi bi-person-badge-fill"></i>
                             </span>
                             <input type="Text" class="form-control" name="NIC" placeholder="NIC" id="nic" required>
                         </div>
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+
+                    </div>
+
+                    <!--Gender & Blood Broup-->
+                    <div class="row">
+                    <div class="w-100 input-group flex-nowrap form-group col-md-6 pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-droplet-fill"></i>
                             </span>
@@ -65,22 +47,15 @@
 
                             </select>
                         </div>
+
+
+                        
                     </div>
 
-                    <!--Gender & Blood Broup-->
+
+                    <!-- Comment -->
                     <div class="row">
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6  pt-3 ">
-                            <span class="input-group-text">
-                                <i class="fi fi-sr-venus-mars"></i>
-                            </span>
-                            <div class="form-control">
-                                <input type="radio" value="Male" name="gender" placeholder="Male"> Male
-                                <input type="radio" value="Female" name="gender" placeholder="Female"> Female
-                            </div>
-                        </div>
-
-
-                        <div class="w-50 input-group flex-nowrap form-group col-md-6 pt-3 ">
+                        <div class="w-100 input-group flex-nowrap form-group col-md-6 pt-3 ">
                             <span class="input-group-text">
                                 <i class="bi bi-droplet-fill"></i>
                             </span>
@@ -96,15 +71,12 @@
                                 <option value="">AB-</option>
                             </select>
                         </div>
-
-
-
+                        
                     </div>
-
-
+                    
                     <!-- Comment -->
                     <div class="row">
-                        <div class="w-20 input-group flex-nowrap form-group  col-md-6  pt-3 ">
+                        <div class="w-100 input-group flex-nowrap form-group  col-md-6  pt-3 ">
                             <span class="input-group-text">
                                 <i class="fi fi-sr-comment-alt"></i>
                             </span>
@@ -112,6 +84,7 @@
                                 id="exampleFormControlTextarea1" rows="2"></textarea>
                         </div>
                     </div>
+
                     <!-- Clear & Submit Button -->
                     <div class="row ">
 
