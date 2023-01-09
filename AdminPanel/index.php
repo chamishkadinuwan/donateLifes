@@ -17,7 +17,7 @@
         <div class="text-center mt-4 name">
             Admin Pannel
         </div>
-        <form action="AdPanDashBoard.php" method="post" class="p-3 mt-3">
+        <form action="AdPanViewBen.php" method="post" class="p-3 mt-3">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
                 <input type="text" name="userName" id="userName" placeholder="Username">
