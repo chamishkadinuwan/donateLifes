@@ -287,22 +287,33 @@
     }
   }
 
-  if (array_key_exists("getDonerInfo", $_POST)) {
 
-    $nic = $_POST['nic'];
-    $data = "";
-    $sql = "SELECT * FROM auth_donor WHERE nic='$nic'";
-    $result = $conn->query($sql);
-    if ($result->num_rows == 1) {
-      $row = $result->fetch_assoc();
-      $data = ['code' => 'code_2', 'user_id' => $row['id'], 'name' => $row['name'], 'nic' => $row['nic'], 'dob' => $row['dob'], 'gender' => $row['gender'], 'address' => $row['address'], 'mobile' => $row['mobile'], 'type_of_organ' => $row['type_of_organ'], 'blood_group' => $row['blood_group']];
+  if (array_key_exists("organ_req", $_POST)) {
+    $id = $_POST['id'];
+    $t = $_POST['OrganType'];
+    $sql = "INSERT INTO organ_requests VALUES(NULL,'$id','$t',CURDATE())";
+    if ($conn->query($sql) === TRUE) {
+      echo "<script>Swal.fire(
+                'Organ Request',
+                'Organ Request successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
     } else {
-      $data = ['code' => 'code_1'];
+      echo "<script>Swal.fire(
+                'Organ Request',
+                'Organ Request failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../RequestOrgan.php';
+                }
+              })</script>";
     }
-    header('Content-type: application/json');
-    echo json_encode($data);
   }
-
 
 
 

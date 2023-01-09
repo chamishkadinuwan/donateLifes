@@ -41,15 +41,27 @@
                 <div class="adH">ADMIN PANEL</div>
 
                 <div class="adCon">
-                    <a href="AdPanDashBoard.php" class="text-dark text-decoration-none"><div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div></a>
-                    <a href="AdPanNewDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div></a>
-                    <a href="AdPanNewBen.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> New Benificiary </div></a>
-                    <a href="AdPanNewHos.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> New Hospital </div></a>
+                    <a href="AdPanDashBoard.php" class="text-dark text-decoration-none">
+                        <div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div>
+                    </a>
+                    <a href="AdPanNewDon.php" class="text-dark text-decoration-none">
+                        <div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div>
+                    </a>
+                    <a href="AdPanNewBen.php" class="text-dark text-decoration-none">
+                        <div class="ad "> <i class="bi bi-person-heart"></i> New Benificiary </div>
+                    </a>
+                    <a href="AdPanNewHos.php" class="text-dark text-decoration-none">
+                        <div class="ad "> <i class="bi bi-person-heart"></i> New Hospital </div>
+                    </a>
                     <!-- <a href="AdPanConDon.php" class="text-dark text-decoration-none"><div class="ad  red"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </div></a> -->
-                    <a href="AdPanConBen.php" class="text-dark text-decoration-none"><div class="ad">  <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </div></a>
-                    <a href="AdPanConHos.php" class="text-dark text-decoration-none"><div class="ad">  <i class="bi bi-person-check-fill"></i> Confirmed Hospital </div></a>
+                    <a href="AdPanConBen.php" class="text-dark text-decoration-none">
+                        <div class="ad"> <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </div>
+                    </a>
+                    <a href="AdPanConHos.php" class="text-dark text-decoration-none">
+                        <div class="ad"> <i class="bi bi-person-check-fill"></i> Confirmed Hospital </div>
+                    </a>
                 </div>
-                <div class="adLog"> <a href="../HomePage.php" class="text-decoration-none">
+                <div class="adLog"> <a href="../index.php" class="text-decoration-none">
                         <div class="btn form">Logout</div>
                     </a></div>
 
@@ -82,7 +94,9 @@
                             <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
                             <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
 
-                            <a href="conDonView.php"><div class="adViewBtn"> <button class="btn form">View ></button></div></a>
+                            <a href="conDonView.php">
+                                <div class="adViewBtn"> <button class="btn form">View ></button></div>
+                            </a>
                         </div>
 
                     </div>

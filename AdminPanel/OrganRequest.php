@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
+    <!--  -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="../Sass/main.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -76,42 +78,65 @@
 
             <div class="grayCardR col-9 px-4">
 
-                <div class="adH"><i class="bi bi-person-heart pe-3"></i> VIEW BENIFICIARY </div>
+                <div class="adH"><i class="bi bi-person-heart pe-3"></i> VIEW REQUESTS </div>
 
                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">NIC No</th>
                             <th scope="col">Name</th>
+                            <th scope="col">NIC No</th>
                             <th scope="col">Blood Group</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Date of Birth</th>
-                            <th scope="col">Mobile</th>
+                            <th scope="col">Requested Organ</th>
+                            <th scope="col">Requested Date</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "SELECT * FROM auth_beneficiary";
+                        $sql = "SELECT a.*, b.* FROM auth_beneficiary a INNER JOIN organ_requests b  ON a.id=b.ben_id";
                         $result = $conn->query($sql);
                         $count = 1;
                         while ($row = $result->fetch_assoc()) {
                         ?>
                         <tr>
                             <th><?php echo $count++; ?></th>
-                            <td><?php echo $row['nic']; ?></td>
                             <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['nic']; ?></td>
                             <td><?php echo $row['blood_group']; ?></td>
-                            <td><?php echo $row['gender']; ?></td>
-                            <td><?php echo $row['dob']; ?></td>
-                            <td><?php echo $row['mobile']; ?></td>
+                            <td><?php echo $row['type_of_organ']; ?></td>
+                            <td><?php echo $row['requested_date']; ?></td>
+                            <td><button onclick="removeOrgan(<?php echo $row['id']; ?>)">Remove</button>
+                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>
                 </table>
             </div>
         </div>
+        <script>
+        function removeOrgan(x) {
+            let data = new FormData();
+            data.append('id', x);
+            data.append('removeOrgan', 'true');
 
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    let x = JSON.parse(xhttp.responseText);
+                    if (x.code === "code_2") {
+                        Swal.fire("Success", "Request removed successfully",
+                            "error");
+                        location.reload();
+                    } else if (x.code === "code_1") {
+                        Swal.fire("Unexpected Error", "System error", "error");
+                    }
+                }
+            };
+            xhttp.open("POST", "../database/con_function.php", true);
+            xhttp.send(data);
+        }
+        </script>
     </div>
 
 
