@@ -41,3 +41,16 @@ if (array_key_exists("updateOrgan", $_POST)) {
     header('Content-type: application/json');
     echo json_encode($data);
 }
+if (array_key_exists("removeOrgan", $_POST)) {
+
+    $t = $_POST['id'];
+    $data = "";
+    $sql = "DELETE FROM organ_requests WHERE id='$t'";
+    if ($conn->query($sql) === TRUE) {
+        $data = ['code' => 'code_2'];
+    } else {
+        $data = ['code' => 'code_1'];
+    }
+    header('Content-type: application/json');
+    echo json_encode($data);
+}

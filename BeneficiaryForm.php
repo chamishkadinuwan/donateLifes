@@ -76,14 +76,14 @@
                             </span>
                             <select class="text-center form-control" name="BloodGroup" placeholder="Blood Group"
                                 id="BloodGroup" required>
-                                <option value="Liver">O+</option>
-                                <option value="Heart">O-</option>
-                                <option value="Lung">A+</option>
-                                <option value="Kidney">A-</option>
-                                <option value="Intestine">B+</option>
-                                <option value="">B-</option>
-                                <option value="">AB+</option>
-                                <option value="">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
                             </select>
                         </div>
 

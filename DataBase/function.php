@@ -288,6 +288,32 @@
   }
 
 
+  if (array_key_exists("organ_req", $_POST)) {
+    $id = $_POST['id'];
+    $t = $_POST['OrganType'];
+    $sql = "INSERT INTO organ_requests VALUES(NULL,'$id','$t',CURDATE())";
+    if ($conn->query($sql) === TRUE) {
+      echo "<script>Swal.fire(
+                'Organ Request',
+                'Organ Request successfully',
+                'success'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../BeneficiaryInstruction.php';
+                }
+              })</script>";
+    } else {
+      echo "<script>Swal.fire(
+                'Organ Request',
+                'Organ Request failed',
+                'error'
+              ).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = '../RequestOrgan.php';
+                }
+              })</script>";
+    }
+  }
 
 
 

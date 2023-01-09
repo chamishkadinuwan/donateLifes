@@ -1,4 +1,5 @@
 <html lang="en">
+<?php include("../database/dbconn.php"); ?>
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,8 @@
     <title>View Donor</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
     <link href="../Sass/main.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -42,16 +44,27 @@
                 <div class="adH">ADMIN PANEL</div>
 
                 <div class="adCon">
-                    <a href="AdPanDashBoard.php" class="text-dark text-decoration-none"><div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div></a>
-                    <a href="AdPanViewDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div></a>
-                    <a href="AdPanViewBen.php" class="text-dark text-decoration-none red"><div class="ad "> <i class="bi bi-person-heart"></i> View Benificiary </div></a>
-                    <a href="AdPanViewHos.php" class="text-dark text-decoration-none"><div class="ad "> <i class="bi bi-person-heart"></i> View Hospital </div></a>
+                    <a href="AdPanDashBoard.php" class="text-dark text-decoration-none">
+                        <div class="ad mt-3 pt-2"> <i class="bi bi-house-heart-fill"></i> Dashboard</div>
+                    </a>
+                    <a href="AdPanViewDon.php" class="text-dark text-decoration-none">
+                        <div class="ad"> <i class="bi bi-person-heart"></i> View Donor </div>
+                    </a>
+                    <a href="AdPanViewBen.php" class="text-dark text-decoration-none red">
+                        <div class="ad "> <i class="bi bi-person-heart"></i> View Benificiary </div>
+                    </a>
+                    <a href="AdPanViewHos.php" class="text-dark text-decoration-none">
+                        <div class="ad "> <i class="bi bi-person-heart"></i> View Hospital </div>
+                    </a>
+                    <a href="OrganRequest.php" class="text-dark text-decoration-none">
+                        <div class="ad"> <i class="bi bi-person-check-fill"></i> View Organ Requests </div>
+                    </a>
                     <!-- <a href="AdPanConDon.php" class="text-dark text-decoration-none"><div class="ad"> <i class="bi bi-person-check-fill"></i> Confirmed Donor </div></a>
                     <a href="AdPanConBen.php" class="text-dark text-decoration-none"><div class="ad red">  <i class="bi bi-person-check-fill"></i> Confirmed Benificiary </div></a>
                     <a href="AdPanConHos.php" class="text-dark text-decoration-none"><div class="ad">  <i class="bi bi-person-check-fill"></i> Confirmed Hospital </div></a> -->
                 </div>
 
-                <div class="adLog"> <a href="../HomePage.php" class="text-decoration-none">
+                <div class="adLog"> <a href="../index.php" class="text-decoration-none">
                         <div class="btn form">Logout</div>
                     </a></div>
 
@@ -62,98 +75,37 @@
 
                 <div class="adH"><i class="bi bi-person-heart pe-3"></i> VIEW DONORS </div>
 
-                <div class="adCard d-flex align-content-center flex-wrap">
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="card" style="width: 18rem;">
-
-                        <div class="card-body m-2 p-3">
-                            <h5 class="card-title mb-3">Kusal Mendis</h5>
-                            <h6 class="card-subtitle mb-3 text-muted">E-Mail: </h6>
-                            <h6 class="card-subtitle mb-3 text-muted">Nic: </h6>
-
-                            <div class="adViewBtn"> <button class="btn form">View ></button></div>
-                        </div>
-
-                    </div>
-
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">NIC No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Type Of Organ</th>
+                            <th scope="col">Blood Group</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $sql = "SELECT * FROM auth_donor";
+                        $result = $conn->query($sql);
+                        $count = 1;
+                        while ($row = $result->fetch_assoc()) {
+                        ?>
+                            <tr>
+                                <th><?php echo $count++; ?></th>
+                                <td><?php echo $row['nic']; ?></td>
+                                <td><?php echo $row['name']; ?></td>
+                                <td><?php echo $row['type_of_organ']; ?></td>
+                                <td><?php echo $row['blood_group']; ?></td>
+                                <td><?php echo $row['gender']; ?></td>
+                                <td><?php echo $row['address']; ?></td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
             </div>
         </div>
 
