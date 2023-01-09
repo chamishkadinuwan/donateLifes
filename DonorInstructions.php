@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="container w-50 p-0 d-flex flex-wrap justify-content-end">
-        <button class="btn org-info">Organ Information</button>
+        
         <a href="DonorForm.php"><button class="btn form">Donor Form</button></a>
     </div>
 

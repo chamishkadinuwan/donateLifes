@@ -294,9 +294,9 @@
     $sql = "INSERT INTO organ_requests VALUES(NULL,'$id','$t',CURDATE())";
     if ($conn->query($sql) === TRUE) {
       echo "<script>Swal.fire(
-                'Organ Request',
-                'Organ Request successfully',
-                'success'
+                'Organ Request ',
+                'Organ Request Successfully. We will Inform You by Call When Organ is Available !!',
+                'success',
               ).then((result) => {
                 if (result.isConfirmed) {
                   window.location.href = '../BeneficiaryInstruction.php';

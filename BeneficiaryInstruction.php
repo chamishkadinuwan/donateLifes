@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="col-md-9 d-flex flex-wrap justify-content-end">
-        <button class="btn org-info">Organ Information</button>
+      
         <a href="BeneficiaryForm.php"><button class="btn form">Beneficiary Form</button></a>
         <a href="RequestOrgan.php"><button class="btn form">Request an Organ</button></a>
     </div>

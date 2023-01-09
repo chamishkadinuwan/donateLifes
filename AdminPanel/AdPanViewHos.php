@@ -23,22 +23,7 @@
 <body style="background-image: url(../Images/BGPic.jpg); background-size: cover;" class=" m-0 border-0">
 
     <!-- Header -->
-    <div class="container-fluid flex-wrap bg-light p-0 mb-3">
-        <header class="d-flex flex-wrap justify-content-center px-5 py-3 mb-3 container-fluid ">
-            <a href="HomePage.php"
-                class="d-flex align-items-center mb- mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img src="../images/Logo.png" alt="" width="100" class="">
-            </a>
-
-            <ul class="nav nav-pills d-flex flex-wrap justify-content-center">
-                <li class="nav-item"><a href="HomePage.php" class="nav-link none" aria-current="#">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link none">Organ Info</a></li>
-                <li class="nav-item"><a href="#" class="nav-link none">Hospital Info</a></li>
-                <li class="nav-item"><a href="#" class="nav-link none">Instruction</a></li>
-            </ul>
-
-        </header>
-    </div>
+v
 
     <!-- Card Wite -->
     <div class="container whiteCard my-6">
